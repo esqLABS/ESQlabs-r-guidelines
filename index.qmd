@@ -1,9 +1,22 @@
 # Welcome {.unnumbered}
 
-This is a Quarto book.
+The esqLABS R Coding Standards book establishes guidelines to ensure that
+scripts are written in a unified manner that promotes readability,
+reproducibility and comprehension for all team members at esqLABS.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+This book introduces [esqLABS coding style specifications](style.qmd) that
+must be followed by all esqLABS collaborators when writing R code. 
+It also aims to highlight the 
+most important [standard coding style rules](tidyverse_style.qmd) and to 
+foster [R coding good practices](good_practices.qmd).
+Additionally, it provides a [list of useful R resources](resources.qmd) 
+organized by topics and a list [caveats and common mistakes](caveats.qmd) to avoid.
 
-```{r}
-1 + 1
-```
+
+::: {.callout-note}
+This book is meant for all R users at esqLABS at apply to all R code written for
+projects. For development guidelines, please refer to the [OSPS-R coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS_R.md)
+:::
+
+
+

@@ -11,7 +11,7 @@ book:
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 
-  site-url: https:///esqlabs-r-coding-standards.github.io
+  site-url: https://esqlabs.github.io/esqlabs-r-coding-standards/
   repo-url: https://github.com/esqLABS/esqlabs-r-coding-standards
   repo-branch: main
   repo-actions: [edit, issue]
