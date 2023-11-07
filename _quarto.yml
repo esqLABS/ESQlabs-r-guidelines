@@ -18,9 +18,11 @@ book:
 
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - style.qmd
+    - tidyverse_style.qmd
+    - good_practices.qmd
+    - caveats.qmd
+    - resources.qmd
 
 bibliography: references.bib
 
