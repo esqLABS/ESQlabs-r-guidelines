@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "esqLABS R Coding Practice",
+    "title": "esqLABS R Coding Standards",
     "section": "",
     "text": "Welcome\nThe esqLABS R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at esqLABS.\nThis book introduces esqLABS coding style specifications that must be followed by all esqLABS collaborators when writing R code. It also aims to highlight the most important standard coding style rules and to foster R coding good practices. Additionally, it provides a list of useful R resources organized by topics and a list caveats and common mistakes to avoid.\n\n\n\n\n\n\nThis book is meant for all R users at esqLABS at apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards"
   },
