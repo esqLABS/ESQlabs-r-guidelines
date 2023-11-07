@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "esqLABS R Coding Practice"
+  title: "esqLABS R Coding Standards"
   reader-mode: true
 
   page-footer:
