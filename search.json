@@ -7,24 +7,17 @@
     "text": "Welcome\nThe esqLABS R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at esqLABS.\nThis book introduces esqLABS coding style specifications that must be followed by all esqLABS collaborators when writing R code. It also aims to highlight the most important standard coding style rules and to foster R coding good practices. Additionally, it provides a list of useful R resources organized by topics and a list caveats and common mistakes to avoid.\n\n\n\n\n\n\nThis book is meant for all R users at esqLABS at apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards"
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "style.html#syntax",
+    "href": "style.html#syntax",
+    "title": "1  esqLABS’ R Style Guide",
+    "section": "1.1 Syntax",
+    "text": "1.1 Syntax\n\n1.1.1 Naming Conventions\nIn order to better match the naming conventions used on other software projects within the company, the way names are defined is different from the tidyverse style guide.\nThe naming style depends on the type of object: \n\nVariable and function names should use only letters and numbers. Use camelCase to separate words within a name. \n# Good\n\nfitModel &lt;- function(){}\n\nresultsDf &lt;- data.frame()\n\n# Bad\n\nfit_model &lt;- function(){}\n\nResultsDf &lt;- data.frame()\nClass names should use PascalCasing.\nTrue constant variables should use ALL_CAPS casing. \n# Good\nCONSTANT_VAR &lt;- 1\n\n# Bad\n\nconstant_var &lt;- 1\nconstantVar &lt;- 1\nUse meaningful and understandable names. The code should read as a story and only some well-known abbreviations (such as pk) should be used.\n# Good\n\n# Primary key\npk &lt;- 1\n\n# Bad\n\n# Primary key\nprimary_key &lt;- 1\n\n\n\n1.1.2 Spacing\nBecause it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings:\n\nUse indentation of 2, \nUse spaces instead of tabs."
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "2  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "objectID": "style.html#functions",
+    "href": "style.html#functions",
+    "title": "1  esqLABS’ R Style Guide",
+    "section": "1.2 Functions",
+    "text": "1.2 Functions\n\n1.2.1 return()\nPrefer using return() for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function."
   }
 ]

@@ -2,18 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/index.html</loc>
-    <lastmod>2023-11-07T13:56:34.603Z</lastmod>
+    <lastmod>2023-11-07T14:06:43.260Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/intro.html</loc>
-    <lastmod>2023-11-07T13:56:34.607Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/style.html</loc>
+    <lastmod>2023-11-07T14:06:43.268Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/summary.html</loc>
-    <lastmod>2023-11-07T13:56:34.611Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/tidyverse_style.html</loc>
+    <lastmod>2023-11-07T14:06:43.268Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/references.html</loc>
-    <lastmod>2023-11-07T13:56:34.615Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/good_practices.html</loc>
+    <lastmod>2023-11-07T14:06:43.272Z</lastmod>
+  </url>
+  <url>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/caveats.html</loc>
+    <lastmod>2023-11-07T14:06:43.276Z</lastmod>
+  </url>
+  <url>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/resources.html</loc>
+    <lastmod>2023-11-07T14:06:43.280Z</lastmod>
   </url>
 </urlset>
