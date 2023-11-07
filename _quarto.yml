@@ -1,0 +1,40 @@
+project:
+  type: book
+
+book:
+  title: "esqLABS R Coding Practice"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      This book is a work in progress.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+
+  site-url: https:///esqlabs-r-coding-standards.github.io
+  repo-url: https://github.com/esqLABS/esqlabs-r-coding-standards
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - esqlabs.scss
+    code-link: true
+
+    author-meta: "Felix MIL, Tanya Zasedateleva"
+    callout-appearance: simple
+
+editor: visual
+
+
+
