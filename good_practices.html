@@ -8,7 +8,7 @@
 
 <meta name="author" content="Felix MIL, Tanya Zasedateleva">
 
-<title>esqLABS R Coding Standards - 3&nbsp; esqLABS’s R coding good practices</title>
+<title>esqLABS R Coding Standards - 3&nbsp; esqLABS’s R good practices</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./good_practices.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS's R coding good practices</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./good_practices.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS's R good practices</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./good_practices.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R coding good practices</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R good practices</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -150,14 +150,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#package-installation" id="toc-package-installation" class="nav-link active" data-scroll-target="#package-installation"><span class="header-section-number">3.1</span> Package Installation</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/edit/main/good_practices.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R coding good practices</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R good practices</span></h1>
 </div>
 
 
@@ -172,8 +178,17 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="package-installation" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="package-installation"><span class="header-section-number">3.1</span> Package Installation</h2>
+<p>Package installation can sometime be tricky and can go wrong for several reasons (locked files, outdated dependencies, old R version …). To minimize the chance of errors, follow this checklist:</p>
+<ul>
+<li><p>Make sure no RStudio Project is loaded (except when using `{renv}`).</p></li>
+<li><p>Make sure no package are loaded in the R session. Use <code>Ctrl + Alt + F10</code> to restart the session to a fresh state.</p></li>
+<li><p>Make sure you have a <code>GITHUB_PAT</code> token configured (by running <code>Sys.getenv("GITHUB_PAT")</code> in a R session, it should return a character starting with <code>ghp_</code>). If not, follow <a href="https://gist.github.com/z3tt/3dab3535007acf108391649766409421">these instructions</a>.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -427,7 +442,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">This book is a work in progress.</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/edit/main/good_practices.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">This book was built with <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>

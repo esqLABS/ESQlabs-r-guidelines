@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "esqLABS R Coding Standards",
     "section": "",
-    "text": "Welcome\nThe esqLABS R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at esqLABS.\nThis book introduces esqLABS coding style specifications that must be followed by all esqLABS collaborators when writing R code. It also aims to highlight the most important standard coding style rules and to foster R coding good practices. Additionally, it provides a list of useful R resources organized by topics and a list caveats and common mistakes to avoid.\n\n\n\n\n\n\nThis book is meant for all R users at esqLABS at apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards"
+    "text": "Welcome\nThe esqLABS R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at esqLABS.\nThis book introduces esqLABS coding style specifications that must be followed by all esqLABS collaborators when writing R code. It also aims to highlight the most important standard coding style rules and to foster R good practices. Additionally, it provides a list of useful R resources organized by topics and a list caveats and common mistakes to avoid.\n\n\n\n\n\n\nThis book is meant for all R users at esqLABS at apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards"
   },
   {
     "objectID": "style.html#syntax",
@@ -19,5 +19,12 @@
     "title": "1  esqLABS’ R Style Guide",
     "section": "1.2 Functions",
     "text": "1.2 Functions\n\n1.2.1 return()\nPrefer using return() for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function."
+  },
+  {
+    "objectID": "good_practices.html#package-installation",
+    "href": "good_practices.html#package-installation",
+    "title": "3  esqLABS’s R good practices",
+    "section": "3.1 Package Installation",
+    "text": "3.1 Package Installation\nPackage installation can sometime be tricky and can go wrong for several reasons (locked files, outdated dependencies, old R version …). To minimize the chance of errors, follow this checklist:\n\nMake sure no RStudio Project is loaded (except when using `{renv}`).\nMake sure no package are loaded in the R session. Use Ctrl + Alt + F10 to restart the session to a fresh state.\nMake sure you have a GITHUB_PAT token configured (by running Sys.getenv(\"GITHUB_PAT\") in a R session, it should return a character starting with ghp_). If not, follow these instructions."
   }
 ]
