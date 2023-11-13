@@ -1,1 +1,11 @@
-# esqLABS's R coding good practices
+# esqLABS's R good practices
+
+## Package Installation
+
+Package installation can sometime be tricky and can go wrong for several reasons (locked files, outdated dependencies, old R version ...). To minimize the chance of errors, follow this checklist:
+
+-   Make sure no RStudio Project is loaded (except when using \`{renv}\`).
+
+-   Make sure no package are loaded in the R session. Use `Ctrl + Alt + F10` to restart the session to a fresh state.
+
+-   Make sure you have a `GITHUB_PAT` token configured (by running `Sys.getenv("GITHUB_PAT")` in a R session, it should return a character starting with `ghp_`). If not, follow [these instructions](https://gist.github.com/z3tt/3dab3535007acf108391649766409421).
