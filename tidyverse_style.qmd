@@ -1,1 +1,237 @@
+---
+format:
+  html:
+    code-fold: true
+    code-summary: "Examples"
+execute: 
+  eval: false
+---
 # Tidyverse Style Guide Highlights
+
+The [tidyverse style guide](https://style.tidyverse.org) is the reference regarding R coding style. The guide is quite comprehensive, with a lot of examples of what to do and what not to do. If you never read it, you should read it at least once.
+
+Here we highlight the main aspects of the [tidyverse style guide](https://style.tidyverse.org), in a very synthetic way. This is to be used more as a checklist. Please refer to the full tidyverse style guide for more details and examples.
+
+Examples listed here might have been adapted, when appropriate, to follow [esqLABS' style](style.qmd) instead of the Tidyverse one.
+
+## Files
+
+### Names
+
+-   File names should be meaningful and end in `.R`.
+-   Avoid using special characters and spaces in file names. Stick with numbers, letters, `-`, and `_`.
+-   Prefer file names that are all lower case.
+-   If files should be run in a particular order, prefix them with numbers.
+
+
+```{r}
+# Good
+01_preprocessing.R
+02_fit_models.R
+utility_functions.R
+```
+
+
+### Structure
+
+-   Use sections (commented lines of `-` and `=`) to break up your file into easily readable chunks.
+-   Load all needed packages at the very beginning of the file (and don't scatter them in your code).
+
+```{r}
+# Load packages -----------------------
+library(esqlabsR)
+
+# Load Data ---------------------------
+
+# Plot data ---------------------------
+## Plot time profile ------------------
+
+## Plot observed vs simulated ---------
+```
+
+
+## Syntax
+
+### Object Names
+
+-   Variable names should be nouns and function names should be verbs.
+-   Names should be concise and meaningful (this is not easy!).
+-   Use underscores `_` to separate words within a name (so called snake case).
+-   Avoid re-using names of common functions and variables.
+
+```{r}
+# Good 
+# Variable names (nouns)
+day_one
+day_1
+
+# Function names (verbs)
+add_rows()
+permute()
+
+# Bad
+first_day_of_the_month # too long
+d1 # not explicit
+row_adder() # not a verb
+T <- FALSE # reusing of common name
+mean <- 10 # reusing of common function
+```
+
+
+### Assignment
+
+-   Use `<-`, not `=`, for assignment.
+
+### Spacing
+
+-   Always put a space after a comma, never before.
+-   Most infix operators (`+`, `-`, `/`, `*`, `<-`, `=`, `==`, `&`, `&&`, `|`, `||`, `>`, `<`, `>=`, `<=`, `%in%`, etc.) should always be surrounded by spaces.
+-   Some infix operators with high precedence (`^`, `:`, `$`, `[]`, `[[]]`, `::`, `:::`, `@`, etc.) should never be surrounded by spaces.
+-   Adding extra spaces is allowed only if it improves alignment of `<-` or `=`.
+
+```{r}
+# Good
+my_data[, 1]
+x <- 1:10
+y <- c(1, 5, 8)
+
+height <- (feet * 12) + inches
+bmi <- weight^2 / height
+```
+
+
+#### Functions
+
+-   Do not put spaces inside or outside parentheses for regular function calls.
+-   Place spaces around `=` when used in function calls.
+-   When you call a function, you can omit the names of data arguments, because they are used so commonly. If you override the default value of an argument, use the full name.
+-   Place a space after `()` used for function arguments definition.
+
+```{r}
+# Good
+mean(x, na.rm = TRUE)
+
+my_function <- function(x, y) {
+  # As usual code is indented by two spaces
+}
+```
+
+
+#### Statements
+
+-   Place a space before and after `()` when used with `if`, `for`, or `while`.
+-   If used, `else` should be on the same line as `}`.
+-   `&` and `|` should never be used inside of an `if` clause because as they can return vectors. Always use `&&` and `||` instead.
+-   It’s ok to drop the curly braces for very simple statements that fit on one line, as long as they don’t have side-effects.
+
+```{r}
+# Good
+if (y < 0 && debug) {
+  message("y is negative")
+} else {
+  message("y is positive or zero")
+}
+
+message <- if (x > 10) "big" else "small"
+```
+
+
+#### Code blocks
+
+-   An opening curly brace `{` should always be followed by a new line. Related code (e.g., an `if` clause, a function declaration, …) must be on the same line as the opening brace.
+-   A closing curly brace `}` should always go on its own line, unless it’s followed by `else`.
+-   Always indent the code inside curly braces by two spaces.
+
+```{r}
+# Good
+if (y == 0) {
+  if (x > 0) {
+    log(x)
+  } else {
+    message("x is negative or zero")
+  }
+} else {
+  y^x
+}
+```
+
+
+#### Pipes
+
+-   Pipes `%>%` should always have a space before it, and should usually be followed by a new line.
+-   After the first step, each line should be indented by two spaces.
+
+```{r}
+iris %>%
+  group_by(Species) %>%
+  summarize_if(is.numeric, mean) %>%
+  ungroup() %>%
+  gather(measure, value, -Species) %>%
+  arrange(value)
+```
+
+
+#### ggplot2
+
+-   `+` should always have a space before it, and should be followed by a new line (such that each layer is on its own line).
+-   After the first step, each line should be indented by two spaces.
+
+```{r}
+ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
+  geom_point() +
+  labs(x = "Sepal Width (cm)", y = "Sepal Length (cm)")
+```
+
+
+## Long Lines
+
+### Function call
+
+-   If a function call is too long to fit on a single line, use one line each for the function name, each argument, and the closing `)`. This makes the code easier to read and to change later.
+
+```{r}
+# Good
+do_something_very_complicated(
+  something = "that",
+  requires = many,
+  arguments = "some of which may be long"
+)
+```
+
+
+### Function definition
+
+-   If a function definition is too long to fit on a single line use either:
+    -   function indent (place each argument on its own line and indent to match the opening `(` of the function). This is the preferred method.
+    -   double-indent (place each argument on its own double indented line)
+-   In both cases the trailing `)` and leading `{` should go on the same line as the last argument.
+
+```{r}
+# Function indent (preferred method)
+long_function_name <- function(a = "a long argument",
+                               b = "another argument",
+                               c = "another long argument") {
+  # As usual code is indented by two spaces
+}
+
+# Double indent
+long_function_name <- function(
+    a = "a long argument",
+    b = "another argument",
+    c = "another long argument") {
+  # As usual code is indented by two spaces
+}
+```
+
+
+## Comments
+
+-   Explain the “why” not the “what” or “how”.
+-   Each line of a comment should begin with the comment symbol `#` and a single space.
+-   Comments should be in sentence case, and only end with a full stop if they contain at least two sentences.
+
+## Others
+
+-   Prefer `TRUE` and `FALSE` over `T` and `F`.
+-   Use `"`, not `'`, for quoting text.
+-   Don’t put `;` at the end of a line, and don’t use `;` to put multiple commands on one line.
