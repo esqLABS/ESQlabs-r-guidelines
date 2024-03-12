@@ -1,3 +1,11 @@
+---
+format:
+  html:
+    code-fold: true
+    code-summary: "Examples"
+execute: 
+  eval: false
+---
 # Tidyverse Style Guide Highlights
 
 The [tidyverse style guide](https://style.tidyverse.org) is the reference regarding R coding style. The guide is quite comprehensive, with a lot of examples of what to do and what not to do. If you never read it, you should read it at least once.
@@ -15,33 +23,21 @@ Examples listed here might have been adapted, when appropriate, to follow [esqLA
 -   Prefer file names that are all lower case.
 -   If files should be run in a particular order, prefix them with numbers.
 
-<details>
 
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Good
 01_preprocessing.R
 02_fit_models.R
 utility_functions.R
 ```
 
-</details>
 
 ### Structure
 
 -   Use sections (commented lines of `-` and `=`) to break up your file into easily readable chunks.
 -   Load all needed packages at the very beginning of the file (and don't scatter them in your code).
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Load packages -----------------------
 library(esqlabsR)
 
@@ -53,7 +49,6 @@ library(esqlabsR)
 ## Plot observed vs simulated ---------
 ```
 
-</details>
 
 ## Syntax
 
@@ -64,13 +59,7 @@ library(esqlabsR)
 -   Use underscores `_` to separate words within a name (so called snake case).
 -   Avoid re-using names of common functions and variables.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Good 
 # Variable names (nouns)
 day_one
@@ -88,7 +77,6 @@ T <- FALSE # reusing of common name
 mean <- 10 # reusing of common function
 ```
 
-</details>
 
 ### Assignment
 
@@ -101,13 +89,7 @@ mean <- 10 # reusing of common function
 -   Some infix operators with high precedence (`^`, `:`, `$`, `[]`, `[[]]`, `::`, `:::`, `@`, etc.) should never be surrounded by spaces.
 -   Adding extra spaces is allowed only if it improves alignment of `<-` or `=`.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Good
 my_data[, 1]
 x <- 1:10
@@ -117,7 +99,6 @@ height <- (feet * 12) + inches
 bmi <- weight^2 / height
 ```
 
-</details>
 
 #### Functions
 
@@ -126,13 +107,7 @@ bmi <- weight^2 / height
 -   When you call a function, you can omit the names of data arguments, because they are used so commonly. If you override the default value of an argument, use the full name.
 -   Place a space after `()` used for function arguments definition.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Good
 mean(x, na.rm = TRUE)
 
@@ -141,7 +116,6 @@ my_function <- function(x, y) {
 }
 ```
 
-</details>
 
 #### Statements
 
@@ -150,13 +124,7 @@ my_function <- function(x, y) {
 -   `&` and `|` should never be used inside of an `if` clause because as they can return vectors. Always use `&&` and `||` instead.
 -   It’s ok to drop the curly braces for very simple statements that fit on one line, as long as they don’t have side-effects.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Good
 if (y < 0 && debug) {
   message("y is negative")
@@ -167,7 +135,6 @@ if (y < 0 && debug) {
 message <- if (x > 10) "big" else "small"
 ```
 
-</details>
 
 #### Code blocks
 
@@ -175,13 +142,7 @@ message <- if (x > 10) "big" else "small"
 -   A closing curly brace `}` should always go on its own line, unless it’s followed by `else`.
 -   Always indent the code inside curly braces by two spaces.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Good
 if (y == 0) {
   if (x > 0) {
@@ -194,20 +155,13 @@ if (y == 0) {
 }
 ```
 
-</details>
 
 #### Pipes
 
 -   Pipes `%>%` should always have a space before it, and should usually be followed by a new line.
 -   After the first step, each line should be indented by two spaces.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 iris %>%
   group_by(Species) %>%
   summarize_if(is.numeric, mean) %>%
@@ -216,26 +170,18 @@ iris %>%
   arrange(value)
 ```
 
-</details>
 
 #### ggplot2
 
 -   `+` should always have a space before it, and should be followed by a new line (such that each layer is on its own line).
 -   After the first step, each line should be indented by two spaces.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point() +
   labs(x = "Sepal Width (cm)", y = "Sepal Length (cm)")
 ```
 
-</details>
 
 ## Long Lines
 
@@ -243,13 +189,7 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
 
 -   If a function call is too long to fit on a single line, use one line each for the function name, each argument, and the closing `)`. This makes the code easier to read and to change later.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Good
 do_something_very_complicated(
   something = "that",
@@ -258,7 +198,6 @@ do_something_very_complicated(
 )
 ```
 
-</details>
 
 ### Function definition
 
@@ -267,13 +206,7 @@ do_something_very_complicated(
     -   double-indent (place each argument on its own double indented line)
 -   In both cases the trailing `)` and leading `{` should go on the same line as the last argument.
 
-<details>
-
-`<summary>Examples`{=html}
-
-</summary>
-
-``` r
+```{r}
 # Function indent (preferred method)
 long_function_name <- function(a = "a long argument",
                                b = "another argument",
@@ -290,7 +223,6 @@ long_function_name <- function(
 }
 ```
 
-</details>
 
 ## Comments
 
