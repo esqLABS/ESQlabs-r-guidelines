@@ -1,11 +1,64 @@
-# esqLABS's R good practices
+# esqLABS' R good practices
 
-## Package Installation
+## Within projects
 
-Package installation can sometime be tricky and can go wrong for several reasons (locked files, outdated dependencies, old R version ...). To minimize the chance of errors, follow this checklist:
+### R projects
 
--   Make sure no RStudio Project is loaded (except when using \`{renv}\`).
+-   Use R projects. R projects should be created when your project was initialized.
 
--   Make sure no package are loaded in the R session. Use `Ctrl + Alt + F10` to restart the session to a fresh state.
+-   Do not use `setwd`, with R projects the working directory should already be set to the right location.
 
--   Make sure you have a `GITHUB_PAT` token configured (by running `Sys.getenv("GITHUB_PAT")` in a R session, it should return a character starting with `ghp_`). If not, follow [these instructions](https://gist.github.com/z3tt/3dab3535007acf108391649766409421).
+-   Only use relative paths that are contained within your project structure.
+
+### Renv
+
+-   Use `{renv}` to ensure every collaborator use the same version of the packages. Ideally your project should have been set up with `{renv}`.
+
+### Style
+
+-   Respect coding [style](style.qmd).
+
+-   Help yourself and others by using [`{styler}`](https://styler.r-lib.org/) package (for indentations and line breaks compliance), and [`{lintr}`](https://lintr.r-lib.org/) package for checking style (line length, variable casing, ...).
+
+    -   Both packages provides easily accessible RStudio Addins (e.g. Style current file, Lint current file).
+
+    -   Styling current file will directly reformat your file, while linting your file will tell you where and why your code is not compliant to the defined style.
+
+    -   Both packages and a default `.lintr` should be ready to use within your project (soon).
+
+### Code Organisation and Structure
+
+-   Respect code header (include author, date, ...), should be at the very beginning of the script:
+
+    ```{r}
+    ################################
+    # Authors:     Name 
+    # Property:     ESQlabs GmbH
+    # Initial Date: DD.MM.YYYY
+    # Last updated: DD.MM.YYYY
+    ################################
+    ```
+
+-   Use sections (commented lines of `-` or `=`) to break up your file into easily readable chunks.
+
+    ```{r}
+    # Load Libraries --------------------
+    ```
+
+-   Load needed packages at the beginning of the file, in the first section just after the header.
+
+-   Source needed files (for example containing "homemade" functions) just after loading packages in a specific section.
+
+-   Define constant parameters in a specific section just after loading packages or sourcing files.
+
+### Comments
+
+-   Comment your code. Explain the "why" not the "what" or "how".
+
+-   Once your code is finalized remove any commented code from your files.
+
+### Functions
+
+-   Generic "homemade" functions that might be needed in various R scripts should be written in a separate file sourced when needed.
+
+-   Avoid having too many nested levels (for loops, ...). Try to create functions instead.
