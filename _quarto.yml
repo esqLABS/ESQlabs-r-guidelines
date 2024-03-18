@@ -18,10 +18,10 @@ book:
 
   chapters:
     - index.qmd
+    - good_practices.qmd
     - style.qmd
     - tidyverse_style.qmd
-    - good_practices.qmd
-    - caveats.qmd
+    - troubleshooting.qmd
     - resources.qmd
 
 bibliography: references.bib
