@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/index.html</loc>
-    <lastmod>2024-03-12T11:01:34.589Z</lastmod>
-  </url>
-  <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/style.html</loc>
-    <lastmod>2024-03-12T11:01:34.589Z</lastmod>
-  </url>
-  <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/tidyverse_style.html</loc>
-    <lastmod>2024-03-12T11:01:34.589Z</lastmod>
+    <lastmod>2024-03-18T12:25:29.428Z</lastmod>
   </url>
   <url>
     <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/good_practices.html</loc>
-    <lastmod>2024-03-12T11:01:34.589Z</lastmod>
+    <lastmod>2024-03-18T12:25:29.428Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/caveats.html</loc>
-    <lastmod>2024-03-12T11:01:34.589Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/style.html</loc>
+    <lastmod>2024-03-18T12:25:29.428Z</lastmod>
+  </url>
+  <url>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/tidyverse_style.html</loc>
+    <lastmod>2024-03-18T12:25:29.428Z</lastmod>
+  </url>
+  <url>
+    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/troubleshooting.html</loc>
+    <lastmod>2024-03-18T12:25:29.428Z</lastmod>
   </url>
   <url>
     <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/resources.html</loc>
-    <lastmod>2024-03-12T11:01:34.589Z</lastmod>
+    <lastmod>2024-03-18T12:25:29.428Z</lastmod>
   </url>
 </urlset>

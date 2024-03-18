@@ -4,119 +4,139 @@
     "href": "index.html",
     "title": "esqLABS R Coding Standards",
     "section": "",
-    "text": "Welcome\nThe esqLABS R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at esqLABS.\nThis book introduces esqLABS coding style specifications that must be followed by all esqLABS collaborators when writing R code. It also aims to highlight the most important standard coding style rules and to foster R good practices. Additionally, it provides a list of useful R resources organized by topics and a list caveats and common mistakes to avoid.\n\n\n\n\n\n\nThis book is meant for all R users at esqLABS at apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards",
+    "text": "Welcome\nThe esqLABS R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at esqLABS.\nThis book introduces R good practices that must be followed by all esqLABS collaborators when writing R code. This includes respecting esqLABS coding style specifications based on the most important standard coding style rules. Additionally, it provides a list of useful R resources organized by topics and a some help for troubleshooting some common issues and mistakes.\n\n\n\n\n\n\nThis book is meant for all R users at esqLABS and apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards",
     "crumbs": [
       "Welcome"
     ]
   },
   {
+    "objectID": "good_practices.html",
+    "href": "good_practices.html",
+    "title": "1  esqLABS’ R good practices",
+    "section": "",
+    "text": "1.1 Within projects",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>esqLABS' R good practices</span>"
+    ]
+  },
+  {
+    "objectID": "good_practices.html#within-projects",
+    "href": "good_practices.html#within-projects",
+    "title": "1  esqLABS’ R good practices",
+    "section": "",
+    "text": "1.1.1 R projects\n\nUse R projects. R projects should be created when your project was initialized.\nDo not use setwd, with R projects the working directory should already be set to the right location.\nOnly use relative paths that are contained within your project structure.\n\n\n\n1.1.2 Renv\n\nUse {renv} to ensure every collaborator use the same version of the packages. Ideally your project should have been set up with {renv}.\n\n\n\n1.1.3 Style\n\nRespect coding style.\nHelp yourself and others by using {styler} package (for indentations and line breaks compliance), and {lintr} package for checking style (line length, variable casing, …).\n\nBoth packages provides easily accessible RStudio Addins (e.g. Style current file, Lint current file).\nStyling current file will directly reformat your file, while linting your file will tell you where and why your code is not compliant to the defined style.\nBoth packages and a default .lintr should be ready to use within your project (soon).\n\n\n\n\n1.1.4 Code Organisation and Structure\n\nRespect code header (include author, date, …), should be at the very beginning of the script:\n\n################################\n# Authors:     Name \n# Property:     ESQlabs GmbH\n# Initial Date: DD.MM.YYYY\n# Last updated: DD.MM.YYYY\n################################\n\nUse sections (commented lines of - or =) to break up your file into easily readable chunks.\n\n# Load Libraries --------------------\n\nLoad needed packages at the beginning of the file, in the first section just after the header.\nSource needed files (for example containing “homemade” functions) just after loading packages in a specific section.\nDefine constant parameters in a specific section just after loading packages or sourcing files.\n\n\n\n1.1.5 Comments\n\nComment your code. Explain the “why” not the “what” or “how”.\nOnce your code is finalized remove any commented code from your files.\n\n\n\n1.1.6 Functions\n\nGeneric “homemade” functions that might be needed in various R scripts should be written in a separate file sourced when needed.\nAvoid having too many nested levels (for loops, …). Try to create functions instead.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>esqLABS' R good practices</span>"
+    ]
+  },
+  {
     "objectID": "style.html",
     "href": "style.html",
-    "title": "1  esqLABS’ R Style Guide",
+    "title": "2  esqLABS’ R Style Guide",
     "section": "",
-    "text": "1.1 Syntax",
+    "text": "2.1 Syntax",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
     ]
   },
   {
     "objectID": "style.html#syntax",
     "href": "style.html#syntax",
-    "title": "1  esqLABS’ R Style Guide",
+    "title": "2  esqLABS’ R Style Guide",
     "section": "",
-    "text": "1.1.1 Naming Conventions\nIn order to better match the naming conventions used on other software projects within the company, the way names are defined is different from the tidyverse style guide.\nThe naming style depends on the type of object: \n\nVariable and function names should use only letters and numbers. Use camelCase to separate words within a name. \n# Good\n\nfitModel &lt;- function(){}\n\nresultsDf &lt;- data.frame()\n\n# Bad\n\nfit_model &lt;- function(){}\n\nResultsDf &lt;- data.frame()\nClass names should use PascalCasing.\nTrue constant variables should use ALL_CAPS casing. \n# Good\nCONSTANT_VAR &lt;- 1\n\n# Bad\n\nconstant_var &lt;- 1\nconstantVar &lt;- 1\nUse meaningful and understandable names. The code should read as a story and only some well-known abbreviations (such as pk) should be used.\n# Good\n\n# Primary key\npk &lt;- 1\n\n# Bad\n\n# Primary key\nprimary_key &lt;- 1\n\n\n\n1.1.2 Spacing\nBecause it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings:\n\nUse indentation of 2, \nUse spaces instead of tabs.",
+    "text": "2.1.1 Naming Conventions\nIn order to better match the naming conventions used on other software projects within the company, the way names are defined is different from the tidyverse style guide.\nThe naming style depends on the type of object: \n\nVariable and function names should use only letters and numbers. Use camelCase to separate words within a name. \n# Good\n\nfitModel &lt;- function(){}\n\nresultsDf &lt;- data.frame()\n\n# Bad\n\nfit_model &lt;- function(){}\n\nResultsDf &lt;- data.frame()\nClass names should use PascalCasing.\nTrue constant variables should use ALL_CAPS casing. \n# Good\nCONSTANT_VAR &lt;- 1\n\n# Bad\n\nconstant_var &lt;- 1\nconstantVar &lt;- 1\nUse meaningful and understandable names. The code should read as a story and only some well-known abbreviations (such as pk) should be used.\n# Good\n\n# Primary key\npk &lt;- 1\n\n# Bad\n\n# Primary key\nprimary_key &lt;- 1\n\n\n\n2.1.2 Spacing\nBecause it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings:\n\nUse indentation of 2, \nUse spaces instead of tabs.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
     ]
   },
   {
     "objectID": "style.html#functions",
     "href": "style.html#functions",
-    "title": "1  esqLABS’ R Style Guide",
-    "section": "1.2 Functions",
-    "text": "1.2 Functions\n\n1.2.1 return()\nPrefer using return() for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function.",
+    "title": "2  esqLABS’ R Style Guide",
+    "section": "2.2 Functions",
+    "text": "2.2 Functions\n\n2.2.1 return()\nPrefer using return() for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
     ]
   },
   {
     "objectID": "tidyverse_style.html",
     "href": "tidyverse_style.html",
-    "title": "2  Tidyverse Style Guide Highlights",
+    "title": "3  Tidyverse Style Guide Highlights",
     "section": "",
-    "text": "2.1 Files",
+    "text": "3.1 Files",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
     ]
   },
   {
     "objectID": "tidyverse_style.html#files",
     "href": "tidyverse_style.html#files",
-    "title": "2  Tidyverse Style Guide Highlights",
+    "title": "3  Tidyverse Style Guide Highlights",
     "section": "",
-    "text": "2.1.1 Names\n\nFile names should be meaningful and end in .R.\nAvoid using special characters and spaces in file names. Stick with numbers, letters, -, and _.\nPrefer file names that are all lower case.\nIf files should be run in a particular order, prefix them with numbers.\n\n\n\nExamples\n# Good\n01_preprocessing.R\n02_fit_models.R\nutility_functions.R\n\n\n\n\n2.1.2 Structure\n\nUse sections (commented lines of - and =) to break up your file into easily readable chunks.\nLoad all needed packages at the very beginning of the file (and don’t scatter them in your code).\n\n\n\nExamples\n# Load packages -----------------------\nlibrary(esqlabsR)\n\n# Load Data ---------------------------\n\n# Plot data ---------------------------\n## Plot time profile ------------------\n\n## Plot observed vs simulated ---------",
+    "text": "3.1.1 Names\n\nFile names should be meaningful and end in .R.\nAvoid using special characters and spaces in file names. Stick with numbers, letters, -, and _.\nPrefer file names that are all lower case.\nIf files should be run in a particular order, prefix them with numbers.\n\n\n\nExamples\n# Good\n01_preprocessing.R\n02_fit_models.R\nutility_functions.R\n\n\n\n\n3.1.2 Structure\n\nUse sections (commented lines of - and =) to break up your file into easily readable chunks.\nLoad all needed packages at the very beginning of the file (and don’t scatter them in your code).\n\n\n\nExamples\n# Load packages -----------------------\nlibrary(esqlabsR)\n\n# Load Data ---------------------------\n\n# Plot data ---------------------------\n## Plot time profile ------------------\n\n## Plot observed vs simulated ---------",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
     ]
   },
   {
     "objectID": "tidyverse_style.html#syntax",
     "href": "tidyverse_style.html#syntax",
-    "title": "2  Tidyverse Style Guide Highlights",
-    "section": "2.2 Syntax",
-    "text": "2.2 Syntax\n\n2.2.1 Object Names\n\nVariable names should be nouns and function names should be verbs.\nNames should be concise and meaningful (this is not easy!).\nUse underscores _ to separate words within a name (so called snake case).\nAvoid re-using names of common functions and variables.\n\n\n\nExamples\n# Good \n# Variable names (nouns)\nday_one\nday_1\n\n# Function names (verbs)\nadd_rows()\npermute()\n\n# Bad\nfirst_day_of_the_month # too long\nd1 # not explicit\nrow_adder() # not a verb\nT &lt;- FALSE # reusing of common name\nmean &lt;- 10 # reusing of common function\n\n\n\n\n2.2.2 Assignment\n\nUse &lt;-, not =, for assignment.\n\n\n\n2.2.3 Spacing\n\nAlways put a space after a comma, never before.\nMost infix operators (+, -, /, *, &lt;-, =, ==, &, &&, |, ||, &gt;, &lt;, &gt;=, &lt;=, %in%, etc.) should always be surrounded by spaces.\nSome infix operators with high precedence (^, :, $, [], [[]], ::, :::, @, etc.) should never be surrounded by spaces.\nAdding extra spaces is allowed only if it improves alignment of &lt;- or =.\n\n\n\nExamples\n# Good\nmy_data[, 1]\nx &lt;- 1:10\ny &lt;- c(1, 5, 8)\n\nheight &lt;- (feet * 12) + inches\nbmi &lt;- weight^2 / height\n\n\n\n2.2.3.1 Functions\n\nDo not put spaces inside or outside parentheses for regular function calls.\nPlace spaces around = when used in function calls.\nWhen you call a function, you can omit the names of data arguments, because they are used so commonly. If you override the default value of an argument, use the full name.\nPlace a space after () used for function arguments definition.\n\n\n\nExamples\n# Good\nmean(x, na.rm = TRUE)\n\nmy_function &lt;- function(x, y) {\n  # As usual code is indented by two spaces\n}\n\n\n\n\n2.2.3.2 Statements\n\nPlace a space before and after () when used with if, for, or while.\nIf used, else should be on the same line as }.\n& and | should never be used inside of an if clause because as they can return vectors. Always use && and || instead.\nIt’s ok to drop the curly braces for very simple statements that fit on one line, as long as they don’t have side-effects.\n\n\n\nExamples\n# Good\nif (y &lt; 0 && debug) {\n  message(\"y is negative\")\n} else {\n  message(\"y is positive or zero\")\n}\n\nmessage &lt;- if (x &gt; 10) \"big\" else \"small\"\n\n\n\n\n2.2.3.3 Code blocks\n\nAn opening curly brace { should always be followed by a new line. Related code (e.g., an if clause, a function declaration, …) must be on the same line as the opening brace.\nA closing curly brace } should always go on its own line, unless it’s followed by else.\nAlways indent the code inside curly braces by two spaces.\n\n\n\nExamples\n# Good\nif (y == 0) {\n  if (x &gt; 0) {\n    log(x)\n  } else {\n    message(\"x is negative or zero\")\n  }\n} else {\n  y^x\n}\n\n\n\n\n2.2.3.4 Pipes\n\nPipes %&gt;% should always have a space before it, and should usually be followed by a new line.\nAfter the first step, each line should be indented by two spaces.\n\n\n\nExamples\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarize_if(is.numeric, mean) %&gt;%\n  ungroup() %&gt;%\n  gather(measure, value, -Species) %&gt;%\n  arrange(value)\n\n\n\n\n2.2.3.5 ggplot2\n\n+ should always have a space before it, and should be followed by a new line (such that each layer is on its own line).\nAfter the first step, each line should be indented by two spaces.\n\n\n\nExamples\nggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +\n  geom_point() +\n  labs(x = \"Sepal Width (cm)\", y = \"Sepal Length (cm)\")",
+    "title": "3  Tidyverse Style Guide Highlights",
+    "section": "3.2 Syntax",
+    "text": "3.2 Syntax\n\n3.2.1 Object Names\n\nVariable names should be nouns and function names should be verbs.\nNames should be concise and meaningful (this is not easy!).\nUse underscores _ to separate words within a name (so called snake case).\nAvoid re-using names of common functions and variables.\n\n\n\nExamples\n# Good \n# Variable names (nouns)\nday_one\nday_1\n\n# Function names (verbs)\nadd_rows()\npermute()\n\n# Bad\nfirst_day_of_the_month # too long\nd1 # not explicit\nrow_adder() # not a verb\nT &lt;- FALSE # reusing of common name\nmean &lt;- 10 # reusing of common function\n\n\n\n\n3.2.2 Assignment\n\nUse &lt;-, not =, for assignment.\n\n\n\n3.2.3 Spacing\n\nAlways put a space after a comma, never before.\nMost infix operators (+, -, /, *, &lt;-, =, ==, &, &&, |, ||, &gt;, &lt;, &gt;=, &lt;=, %in%, etc.) should always be surrounded by spaces.\nSome infix operators with high precedence (^, :, $, [], [[]], ::, :::, @, etc.) should never be surrounded by spaces.\nAdding extra spaces is allowed only if it improves alignment of &lt;- or =.\n\n\n\nExamples\n# Good\nmy_data[, 1]\nx &lt;- 1:10\ny &lt;- c(1, 5, 8)\n\nheight &lt;- (feet * 12) + inches\nbmi &lt;- weight^2 / height\n\n\n\n3.2.3.1 Functions\n\nDo not put spaces inside or outside parentheses for regular function calls.\nPlace spaces around = when used in function calls.\nWhen you call a function, you can omit the names of data arguments, because they are used so commonly. If you override the default value of an argument, use the full name.\nPlace a space after () used for function arguments definition.\n\n\n\nExamples\n# Good\nmean(x, na.rm = TRUE)\n\nmy_function &lt;- function(x, y) {\n  # As usual code is indented by two spaces\n}\n\n\n\n\n3.2.3.2 Statements\n\nPlace a space before and after () when used with if, for, or while.\nIf used, else should be on the same line as }.\n& and | should never be used inside of an if clause because as they can return vectors. Always use && and || instead.\nIt’s ok to drop the curly braces for very simple statements that fit on one line, as long as they don’t have side-effects.\n\n\n\nExamples\n# Good\nif (y &lt; 0 && debug) {\n  message(\"y is negative\")\n} else {\n  message(\"y is positive or zero\")\n}\n\nmessage &lt;- if (x &gt; 10) \"big\" else \"small\"\n\n\n\n\n3.2.3.3 Code blocks\n\nAn opening curly brace { should always be followed by a new line. Related code (e.g., an if clause, a function declaration, …) must be on the same line as the opening brace.\nA closing curly brace } should always go on its own line, unless it’s followed by else.\nAlways indent the code inside curly braces by two spaces.\n\n\n\nExamples\n# Good\nif (y == 0) {\n  if (x &gt; 0) {\n    log(x)\n  } else {\n    message(\"x is negative or zero\")\n  }\n} else {\n  y^x\n}\n\n\n\n\n3.2.3.4 Pipes\n\nPipes %&gt;% should always have a space before it, and should usually be followed by a new line.\nAfter the first step, each line should be indented by two spaces.\n\n\n\nExamples\niris %&gt;%\n  group_by(Species) %&gt;%\n  summarize_if(is.numeric, mean) %&gt;%\n  ungroup() %&gt;%\n  gather(measure, value, -Species) %&gt;%\n  arrange(value)\n\n\n\n\n3.2.3.5 ggplot2\n\n+ should always have a space before it, and should be followed by a new line (such that each layer is on its own line).\nAfter the first step, each line should be indented by two spaces.\n\n\n\nExamples\nggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +\n  geom_point() +\n  labs(x = \"Sepal Width (cm)\", y = \"Sepal Length (cm)\")",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
     ]
   },
   {
     "objectID": "tidyverse_style.html#long-lines",
     "href": "tidyverse_style.html#long-lines",
-    "title": "2  Tidyverse Style Guide Highlights",
-    "section": "2.3 Long Lines",
-    "text": "2.3 Long Lines\n\n2.3.1 Function call\n\nIf a function call is too long to fit on a single line, use one line each for the function name, each argument, and the closing ). This makes the code easier to read and to change later.\n\n\n\nExamples\n# Good\ndo_something_very_complicated(\n  something = \"that\",\n  requires = many,\n  arguments = \"some of which may be long\"\n)\n\n\n\n\n2.3.2 Function definition\n\nIf a function definition is too long to fit on a single line use either:\n\nfunction indent (place each argument on its own line and indent to match the opening ( of the function). This is the preferred method.\ndouble-indent (place each argument on its own double indented line)\n\nIn both cases the trailing ) and leading { should go on the same line as the last argument.\n\n\n\nExamples\n# Function indent (preferred method)\nlong_function_name &lt;- function(a = \"a long argument\",\n                               b = \"another argument\",\n                               c = \"another long argument\") {\n  # As usual code is indented by two spaces\n}\n\n# Double indent\nlong_function_name &lt;- function(\n    a = \"a long argument\",\n    b = \"another argument\",\n    c = \"another long argument\") {\n  # As usual code is indented by two spaces\n}",
+    "title": "3  Tidyverse Style Guide Highlights",
+    "section": "3.3 Long Lines",
+    "text": "3.3 Long Lines\n\n3.3.1 Function call\n\nIf a function call is too long to fit on a single line, use one line each for the function name, each argument, and the closing ). This makes the code easier to read and to change later.\n\n\n\nExamples\n# Good\ndo_something_very_complicated(\n  something = \"that\",\n  requires = many,\n  arguments = \"some of which may be long\"\n)\n\n\n\n\n3.3.2 Function definition\n\nIf a function definition is too long to fit on a single line use either:\n\nfunction indent (place each argument on its own line and indent to match the opening ( of the function). This is the preferred method.\ndouble-indent (place each argument on its own double indented line)\n\nIn both cases the trailing ) and leading { should go on the same line as the last argument.\n\n\n\nExamples\n# Function indent (preferred method)\nlong_function_name &lt;- function(a = \"a long argument\",\n                               b = \"another argument\",\n                               c = \"another long argument\") {\n  # As usual code is indented by two spaces\n}\n\n# Double indent\nlong_function_name &lt;- function(\n    a = \"a long argument\",\n    b = \"another argument\",\n    c = \"another long argument\") {\n  # As usual code is indented by two spaces\n}",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
     ]
   },
   {
     "objectID": "tidyverse_style.html#comments",
     "href": "tidyverse_style.html#comments",
-    "title": "2  Tidyverse Style Guide Highlights",
-    "section": "2.4 Comments",
-    "text": "2.4 Comments\n\nExplain the “why” not the “what” or “how”.\nEach line of a comment should begin with the comment symbol # and a single space.\nComments should be in sentence case, and only end with a full stop if they contain at least two sentences.",
+    "title": "3  Tidyverse Style Guide Highlights",
+    "section": "3.4 Comments",
+    "text": "3.4 Comments\n\nExplain the “why” not the “what” or “how”.\nEach line of a comment should begin with the comment symbol # and a single space.\nComments should be in sentence case, and only end with a full stop if they contain at least two sentences.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
     ]
   },
   {
     "objectID": "tidyverse_style.html#others",
     "href": "tidyverse_style.html#others",
-    "title": "2  Tidyverse Style Guide Highlights",
-    "section": "2.5 Others",
-    "text": "2.5 Others\n\nPrefer TRUE and FALSE over T and F.\nUse \", not ', for quoting text.\nDon’t put ; at the end of a line, and don’t use ; to put multiple commands on one line.",
+    "title": "3  Tidyverse Style Guide Highlights",
+    "section": "3.5 Others",
+    "text": "3.5 Others\n\nPrefer TRUE and FALSE over T and F.\nUse \", not ', for quoting text.\nDon’t put ; at the end of a line, and don’t use ; to put multiple commands on one line.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
     ]
   },
   {
-    "objectID": "good_practices.html",
-    "href": "good_practices.html",
-    "title": "3  esqLABS’s R good practices",
+    "objectID": "troubleshooting.html",
+    "href": "troubleshooting.html",
+    "title": "4  Troubleshooting",
     "section": "",
-    "text": "3.1 Package Installation\nPackage installation can sometime be tricky and can go wrong for several reasons (locked files, outdated dependencies, old R version …). To minimize the chance of errors, follow this checklist:",
+    "text": "4.1 Package Installation\nPackage installation can sometime be tricky and can go wrong for several reasons (locked files, outdated dependencies, old R version …). To minimize the chance of errors, follow this checklist:",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>esqLABS's R good practices</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   },
   {
-    "objectID": "good_practices.html#package-installation",
-    "href": "good_practices.html#package-installation",
-    "title": "3  esqLABS’s R good practices",
+    "objectID": "troubleshooting.html#package-installation",
+    "href": "troubleshooting.html#package-installation",
+    "title": "4  Troubleshooting",
     "section": "",
     "text": "Make sure no RStudio Project is loaded (except when using `{renv}`).\nMake sure no package are loaded in the R session. Use Ctrl + Alt + F10 to restart the session to a fresh state.\nMake sure you have a GITHUB_PAT token configured (by running Sys.getenv(\"GITHUB_PAT\") in a R session, it should return a character starting with ghp_). If not, follow these instructions.",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>esqLABS's R good practices</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
   }
 ]

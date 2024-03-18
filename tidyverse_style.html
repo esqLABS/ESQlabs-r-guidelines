@@ -8,7 +8,7 @@
 
 <meta name="author" content="Felix MIL, Diane Lefaudeux, Tanya Zasedateleva">
 
-<title>esqLABS R Coding Standards - 2&nbsp; Tidyverse Style Guide Highlights</title>
+<title>esqLABS R Coding Standards - 3&nbsp; Tidyverse Style Guide Highlights</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./good_practices.html" rel="next">
+<link href="./troubleshooting.html" rel="next">
 <link href="./style.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tidyverse_style.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tidyverse_style.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -157,26 +157,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./good_practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">esqLABS’ R good practices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./style.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">esqLABS’ R Style Guide</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">esqLABS’ R Style Guide</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyverse_style.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./good_practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R good practices</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./caveats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Caveats</span></span></a>
+  <a href="./troubleshooting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -195,24 +195,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#files" id="toc-files" class="nav-link active" data-scroll-target="#files"><span class="header-section-number">2.1</span> Files</a>
+  <li><a href="#files" id="toc-files" class="nav-link active" data-scroll-target="#files"><span class="header-section-number">3.1</span> Files</a>
   <ul class="collapse">
-  <li><a href="#names" id="toc-names" class="nav-link" data-scroll-target="#names"><span class="header-section-number">2.1.1</span> Names</a></li>
-  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure"><span class="header-section-number">2.1.2</span> Structure</a></li>
+  <li><a href="#names" id="toc-names" class="nav-link" data-scroll-target="#names"><span class="header-section-number">3.1.1</span> Names</a></li>
+  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure"><span class="header-section-number">3.1.2</span> Structure</a></li>
   </ul></li>
-  <li><a href="#syntax" id="toc-syntax" class="nav-link" data-scroll-target="#syntax"><span class="header-section-number">2.2</span> Syntax</a>
+  <li><a href="#syntax" id="toc-syntax" class="nav-link" data-scroll-target="#syntax"><span class="header-section-number">3.2</span> Syntax</a>
   <ul class="collapse">
-  <li><a href="#object-names" id="toc-object-names" class="nav-link" data-scroll-target="#object-names"><span class="header-section-number">2.2.1</span> Object Names</a></li>
-  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment"><span class="header-section-number">2.2.2</span> Assignment</a></li>
-  <li><a href="#spacing" id="toc-spacing" class="nav-link" data-scroll-target="#spacing"><span class="header-section-number">2.2.3</span> Spacing</a></li>
+  <li><a href="#object-names" id="toc-object-names" class="nav-link" data-scroll-target="#object-names"><span class="header-section-number">3.2.1</span> Object Names</a></li>
+  <li><a href="#assignment" id="toc-assignment" class="nav-link" data-scroll-target="#assignment"><span class="header-section-number">3.2.2</span> Assignment</a></li>
+  <li><a href="#spacing" id="toc-spacing" class="nav-link" data-scroll-target="#spacing"><span class="header-section-number">3.2.3</span> Spacing</a></li>
   </ul></li>
-  <li><a href="#long-lines" id="toc-long-lines" class="nav-link" data-scroll-target="#long-lines"><span class="header-section-number">2.3</span> Long Lines</a>
+  <li><a href="#long-lines" id="toc-long-lines" class="nav-link" data-scroll-target="#long-lines"><span class="header-section-number">3.3</span> Long Lines</a>
   <ul class="collapse">
-  <li><a href="#function-call" id="toc-function-call" class="nav-link" data-scroll-target="#function-call"><span class="header-section-number">2.3.1</span> Function call</a></li>
-  <li><a href="#function-definition" id="toc-function-definition" class="nav-link" data-scroll-target="#function-definition"><span class="header-section-number">2.3.2</span> Function definition</a></li>
+  <li><a href="#function-call" id="toc-function-call" class="nav-link" data-scroll-target="#function-call"><span class="header-section-number">3.3.1</span> Function call</a></li>
+  <li><a href="#function-definition" id="toc-function-definition" class="nav-link" data-scroll-target="#function-definition"><span class="header-section-number">3.3.2</span> Function definition</a></li>
   </ul></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments"><span class="header-section-number">2.4</span> Comments</a></li>
-  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others"><span class="header-section-number">2.5</span> Others</a></li>
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments"><span class="header-section-number">3.4</span> Comments</a></li>
+  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others"><span class="header-section-number">3.5</span> Others</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/edit/main/tidyverse_style.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></h1>
 </div>
 
 
@@ -241,10 +241,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The <a href="https://style.tidyverse.org">tidyverse style guide</a> is the reference regarding R coding style. The guide is quite comprehensive, with a lot of examples of what to do and what not to do. If you never read it, you should read it at least once.</p>
 <p>Here we highlight the main aspects of the <a href="https://style.tidyverse.org">tidyverse style guide</a>, in a very synthetic way. This is to be used more as a checklist. Please refer to the full tidyverse style guide for more details and examples.</p>
 <p>Examples listed here might have been adapted, when appropriate, to follow <a href="./style.html">esqLABS’ style</a> instead of the Tidyverse one.</p>
-<section id="files" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="files"><span class="header-section-number">2.1</span> Files</h2>
-<section id="names" class="level3" data-number="2.1.1">
-<h3 data-number="2.1.1" class="anchored" data-anchor-id="names"><span class="header-section-number">2.1.1</span> Names</h3>
+<section id="files" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="files"><span class="header-section-number">3.1</span> Files</h2>
+<section id="names" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="names"><span class="header-section-number">3.1.1</span> Names</h3>
 <ul>
 <li>File names should be meaningful and end in <code>.R</code>.</li>
 <li>Avoid using special characters and spaces in file names. Stick with numbers, letters, <code>-</code>, and <code>_</code>.</li>
@@ -261,8 +261,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="structure" class="level3" data-number="2.1.2">
-<h3 data-number="2.1.2" class="anchored" data-anchor-id="structure"><span class="header-section-number">2.1.2</span> Structure</h3>
+<section id="structure" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="structure"><span class="header-section-number">3.1.2</span> Structure</h3>
 <ul>
 <li>Use sections (commented lines of <code>-</code> and <code>=</code>) to break up your file into easily readable chunks.</li>
 <li>Load all needed packages at the very beginning of the file (and don’t scatter them in your code).</li>
@@ -283,10 +283,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="syntax" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="syntax"><span class="header-section-number">2.2</span> Syntax</h2>
-<section id="object-names" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="object-names"><span class="header-section-number">2.2.1</span> Object Names</h3>
+<section id="syntax" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="syntax"><span class="header-section-number">3.2</span> Syntax</h2>
+<section id="object-names" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="object-names"><span class="header-section-number">3.2.1</span> Object Names</h3>
 <ul>
 <li>Variable names should be nouns and function names should be verbs.</li>
 <li>Names should be concise and meaningful (this is not easy!).</li>
@@ -314,14 +314,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="assignment" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="assignment"><span class="header-section-number">2.2.2</span> Assignment</h3>
+<section id="assignment" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="assignment"><span class="header-section-number">3.2.2</span> Assignment</h3>
 <ul>
 <li>Use <code>&lt;-</code>, not <code>=</code>, for assignment.</li>
 </ul>
 </section>
-<section id="spacing" class="level3" data-number="2.2.3">
-<h3 data-number="2.2.3" class="anchored" data-anchor-id="spacing"><span class="header-section-number">2.2.3</span> Spacing</h3>
+<section id="spacing" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="spacing"><span class="header-section-number">3.2.3</span> Spacing</h3>
 <ul>
 <li>Always put a space after a comma, never before.</li>
 <li>Most infix operators (<code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, <code>&lt;-</code>, <code>=</code>, <code>==</code>, <code>&amp;</code>, <code>&amp;&amp;</code>, <code>|</code>, <code>||</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>%in%</code>, etc.) should always be surrounded by spaces.</li>
@@ -340,8 +340,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>bmi <span class="ot">&lt;-</span> weight<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> height</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="functions" class="level4" data-number="2.2.3.1">
-<h4 data-number="2.2.3.1" class="anchored" data-anchor-id="functions"><span class="header-section-number">2.2.3.1</span> Functions</h4>
+<section id="functions" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="functions"><span class="header-section-number">3.2.3.1</span> Functions</h4>
 <ul>
 <li>Do not put spaces inside or outside parentheses for regular function calls.</li>
 <li>Place spaces around <code>=</code> when used in function calls.</li>
@@ -360,8 +360,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="statements" class="level4" data-number="2.2.3.2">
-<h4 data-number="2.2.3.2" class="anchored" data-anchor-id="statements"><span class="header-section-number">2.2.3.2</span> Statements</h4>
+<section id="statements" class="level4" data-number="3.2.3.2">
+<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="statements"><span class="header-section-number">3.2.3.2</span> Statements</h4>
 <ul>
 <li>Place a space before and after <code>()</code> when used with <code>if</code>,&nbsp;<code>for</code>, or&nbsp;<code>while</code>.</li>
 <li>If used, <code>else</code> should be on the same line as <code>}</code>.</li>
@@ -382,8 +382,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="code-blocks" class="level4" data-number="2.2.3.3">
-<h4 data-number="2.2.3.3" class="anchored" data-anchor-id="code-blocks"><span class="header-section-number">2.2.3.3</span> Code blocks</h4>
+<section id="code-blocks" class="level4" data-number="3.2.3.3">
+<h4 data-number="3.2.3.3" class="anchored" data-anchor-id="code-blocks"><span class="header-section-number">3.2.3.3</span> Code blocks</h4>
 <ul>
 <li>An opening curly brace <code>{</code> should always be followed by a new line. Related code (e.g., an <code>if</code> clause, a function declaration, …) must be on the same line as the opening brace.</li>
 <li>A closing curly brace <code>}</code> should always go on its own line, unless it’s followed by <code>else</code>.</li>
@@ -405,8 +405,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="pipes" class="level4" data-number="2.2.3.4">
-<h4 data-number="2.2.3.4" class="anchored" data-anchor-id="pipes"><span class="header-section-number">2.2.3.4</span> Pipes</h4>
+<section id="pipes" class="level4" data-number="3.2.3.4">
+<h4 data-number="3.2.3.4" class="anchored" data-anchor-id="pipes"><span class="header-section-number">3.2.3.4</span> Pipes</h4>
 <ul>
 <li>Pipes <code>%&gt;%</code> should always have a space before it, and should usually be followed by a new line.</li>
 <li>After the first step, each line should be indented by two spaces.</li>
@@ -423,8 +423,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="ggplot2" class="level4" data-number="2.2.3.5">
-<h4 data-number="2.2.3.5" class="anchored" data-anchor-id="ggplot2"><span class="header-section-number">2.2.3.5</span> ggplot2</h4>
+<section id="ggplot2" class="level4" data-number="3.2.3.5">
+<h4 data-number="3.2.3.5" class="anchored" data-anchor-id="ggplot2"><span class="header-section-number">3.2.3.5</span> ggplot2</h4>
 <ul>
 <li><code>+</code> should always have a space before it, and should be followed by a new line (such that each layer is on its own line).</li>
 <li>After the first step, each line should be indented by two spaces.</li>
@@ -440,10 +440,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 </section>
-<section id="long-lines" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="long-lines"><span class="header-section-number">2.3</span> Long Lines</h2>
-<section id="function-call" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1" class="anchored" data-anchor-id="function-call"><span class="header-section-number">2.3.1</span> Function call</h3>
+<section id="long-lines" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="long-lines"><span class="header-section-number">3.3</span> Long Lines</h2>
+<section id="function-call" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="function-call"><span class="header-section-number">3.3.1</span> Function call</h3>
 <ul>
 <li>If a function call is too long to fit on a single line, use one line each for the function name, each argument, and the closing <code>)</code>. This makes the code easier to read and to change later.</li>
 </ul>
@@ -459,8 +459,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 </section>
-<section id="function-definition" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="function-definition"><span class="header-section-number">2.3.2</span> Function definition</h3>
+<section id="function-definition" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="function-definition"><span class="header-section-number">3.3.2</span> Function definition</h3>
 <ul>
 <li>If a function definition is too long to fit on a single line use either:
 <ul>
@@ -490,16 +490,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="comments" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="comments"><span class="header-section-number">2.4</span> Comments</h2>
+<section id="comments" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="comments"><span class="header-section-number">3.4</span> Comments</h2>
 <ul>
 <li>Explain the “why” not the “what” or “how”.</li>
 <li>Each line of a comment should begin with the comment symbol <code>#</code> and a single space.</li>
 <li>Comments should be in sentence case, and only end with a full stop if they contain at least two sentences.</li>
 </ul>
 </section>
-<section id="others" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="others"><span class="header-section-number">2.5</span> Others</h2>
+<section id="others" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="others"><span class="header-section-number">3.5</span> Others</h2>
 <ul>
 <li>Prefer <code>TRUE</code> and <code>FALSE</code> over <code>T</code> and <code>F</code>.</li>
 <li>Use <code>"</code>, not <code>'</code>, for quoting text.</li>
@@ -922,12 +922,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./style.html" class="pagination-link" aria-label="esqLABS' R Style Guide">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">esqLABS’ R Style Guide</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">esqLABS’ R Style Guide</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./good_practices.html" class="pagination-link" aria-label="esqLABS's R good practices">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R good practices</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./troubleshooting.html" class="pagination-link" aria-label="Troubleshooting">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

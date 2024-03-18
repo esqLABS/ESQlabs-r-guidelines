@@ -8,7 +8,7 @@
 
 <meta name="author" content="Felix MIL, Diane Lefaudeux, Tanya Zasedateleva">
 
-<title>esqLABS R Coding Standards - 4&nbsp; Caveats</title>
+<title>esqLABS R Coding Standards - 4&nbsp; Troubleshooting</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./resources.html" rel="next">
-<link href="./good_practices.html" rel="prev">
+<link href="./tidyverse_style.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./caveats.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Caveats</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./troubleshooting.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Troubleshooting</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -123,26 +123,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./good_practices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">esqLABS’ R good practices</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./style.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">esqLABS’ R Style Guide</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">esqLABS’ R Style Guide</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tidyverse_style.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./good_practices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R good practices</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./caveats.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Caveats</span></span></a>
+  <a href="./troubleshooting.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Troubleshooting</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -157,14 +157,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#package-installation" id="toc-package-installation" class="nav-link active" data-scroll-target="#package-installation"><span class="header-section-number">4.1</span> Package Installation</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/edit/main/troubleshooting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Caveats</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Troubleshooting</span></h1>
 </div>
 
 
@@ -181,8 +187,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="package-installation" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="package-installation"><span class="header-section-number">4.1</span> Package Installation</h2>
+<p>Package installation can sometime be tricky and can go wrong for several reasons (locked files, outdated dependencies, old R version …). To minimize the chance of errors, follow this checklist:</p>
+<ul>
+<li><p>Make sure no RStudio Project is loaded (except when using `{renv}`).</p></li>
+<li><p>Make sure no package are loaded in the R session. Use <code>Ctrl + Alt + F10</code> to restart the session to a fresh state.</p></li>
+<li><p>Make sure you have a <code>GITHUB_PAT</code> token configured (by running <code>Sys.getenv("GITHUB_PAT")</code> in a R session, it should return a character starting with <code>ghp_</code>). If not, follow <a href="https://gist.github.com/z3tt/3dab3535007acf108391649766409421">these instructions</a>.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -596,8 +611,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./good_practices.html" class="pagination-link" aria-label="esqLABS's R good practices">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">esqLABS’s R good practices</span></span>
+      <a href="./tidyverse_style.html" class="pagination-link" aria-label="Tidyverse Style Guide Highlights">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tidyverse Style Guide Highlights</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -614,7 +629,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/edit/main/caveats.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/edit/main/troubleshooting.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/esqLABS/esqlabs-r-coding-standards/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
