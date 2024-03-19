@@ -12,7 +12,7 @@ The [tidyverse style guide](https://style.tidyverse.org) is the reference regard
 
 Here we highlight the main aspects of the [tidyverse style guide](https://style.tidyverse.org), in a very synthetic way. This is to be used more as a checklist. Please refer to the full tidyverse style guide for more details and examples.
 
-Examples listed here might have been adapted, when appropriate, to follow [esqLABS' style](style.qmd) instead of the Tidyverse one.
+Examples listed here might have been adapted, when appropriate, to follow [ESQlabs' style](style.qmd) instead of the Tidyverse one.
 
 ## Files
 

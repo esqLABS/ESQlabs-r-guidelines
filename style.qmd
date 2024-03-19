@@ -1,6 +1,6 @@
-# esqLABS' R Style Guide
+# ESQlabs' R Style Guide
 
-At esqlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections will outline the most important differences wit the Tidyverse guide and why these difference exists.
+At ESQlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections will outline the most important differences wit the Tidyverse guide and why these difference exists.
 
 ## Syntax
 

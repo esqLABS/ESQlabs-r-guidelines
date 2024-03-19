@@ -1,4 +1,4 @@
-# esqLABS' R good practices
+# ESQlabs' R good practices
 
 ## Within projects
 
