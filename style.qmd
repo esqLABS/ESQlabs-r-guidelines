@@ -1,69 +1,59 @@
 # ESQlabs' R Style Guide
 
-At ESQlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections will outline the most important differences wit the Tidyverse guide and why these difference exists.
+At ESQlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections will outline the most important differences with the Tidyverse guide.
 
 ## Syntax
 
 ### Naming Conventions
 
-In order to better match the naming conventions used on other software projects within the company, the way names are defined is different from the tidyverse style guide.
+For simplicity, users should use `snake_case` as recommended by the tidyverse style (this is not the case for developers that should follow the [OSPS-R coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS_R.md)).
 
-The naming style depends on the type of object: 
+However the naming style depends on the type of object: 
 
--   Variable and function names should use only letters and numbers. Use `camelCase` to separate words within a name. 
+-   Variable and function names should use only letters and numbers. Use `snake_case` to separate words within a name:
 
     ``` r
     # Good
-
-    fitModel <- function(){}
-
-    resultsDf <- data.frame()
-
-    # Bad
-
-    fit_model <- function(){}
-
-    ResultsDf <- data.frame()
+    fit_model <- function() {
+      # code
+    }
+    results_df <- data.frame()
     ```
 
--   Class names should use `PascalCasing`.
-
--   True constant variables should use `ALL_CAPS` casing. 
+-   True constant variables should use `ALL_CAPS` casing:
 
     ``` r
     # Good
     CONSTANT_VAR <- 1
-
-    # Bad
-
-    constant_var <- 1
-    constantVar <- 1
     ```
 
--   Use meaningful and understandable names. The code should read as a story and only some well-known abbreviations (such as pk) should be used.
+-   Use short meaningful and understandable names. The code should read as a story and only some well-known abbreviations should be used.
 
     ``` r
     # Good
-
-    # Primary key
-    pk <- 1
+    pk_data <- read_excel("pkDataFile.xls")
 
     # Bad
-
-    # Primary key
-    primary_key <- 1
+    pharmacokinetics_data <- read_excel("pkDataFile.xls") # Too long
     ```
 
 ### Spacing
 
-Because it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings:
+Because it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings :
 
--   Use indentation of 2, 
+-   Use spaces instead of tabs
+-   Use indentation width of 2
 
--   Use spaces instead of tabs.
+You can check that these settings are correctly set in Tools \> Global Options \> Code \> Editing:
+
+![](images/indent_settings.png){width="130"}
 
 ## Functions
 
 ### `return()`
 
-Prefer using `return()` for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function. 
+Prefer using `return()` for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function.
+
+## Line length
+
+Avoid having long lines. Restrict yourself to 120 characters (instead of the usual limit of 80 characters).
