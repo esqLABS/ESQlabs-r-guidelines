@@ -1,1 +1,41 @@
 # Resources
+
+Some useful resources on various topics are listed below. As tons of resources are available online, this list is far from exhaustive and only focuses on the most useful and well made ones.
+
+## General
+
+-   [R for Data Science (2e)](https://r4ds.hadley.nz/)
+
+## Visualization
+
+-   [R Graphics Cookbook](https://r-graphics.org/)
+
+-   [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/) - WIP
+
+-   [Plots gallery](r-graph-gallery.com), can serve as examples or ideas
+
+## Advanced R
+
+-   [Advanced R](https://adv-r.hadley.nz/index.html)
+
+## Shiny Apps
+
+-   [Shiny Tutorials](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
+
+-   [Mastering Shiny](https://mastering-shiny.org/)
+
+-   [Gallery of apps and widgets](https://shiny.posit.co/r/gallery/)
+
+## Interactive Visualization
+
+-   [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com)
+
+-   [Plotly](https://plotly.com/r/) documentation
+
+## Style and Coding Standards
+
+-   [Tidyverse style guide](https://style.tidyverse.org/)
+
+## Cheatsheets
+
+-   RStudio has many [cheatsheets](https://posit.co/resources/cheatsheets/)
