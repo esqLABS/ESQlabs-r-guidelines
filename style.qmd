@@ -1,3 +1,8 @@
+---
+execute: 
+  eval: false
+---
+
 # ESQlabs' R Style Guide
 
 At ESQlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections will outline the most important differences with the Tidyverse guide.
@@ -12,7 +17,7 @@ However the naming style depends on the type of object: 
 
 -   Variable and function names should use only letters and numbers. Use `snake_case` to separate words within a name:
 
-    ``` r
+    ```{r}
     # Good
     fit_model <- function() {
       # code
@@ -22,14 +27,14 @@ However the naming style depends on the type of object: 
 
 -   True constant variables should use `ALL_CAPS` casing:
 
-    ``` r
+    ```{r}
     # Good
     CONSTANT_VAR <- 1
     ```
 
 -   Use short meaningful and understandable names. The code should read as a story and only some well-known abbreviations should be used.
 
-    ``` r
+    ```{r}
     # Good
     pk_data <- read_excel("pkDataFile.xls")
 
