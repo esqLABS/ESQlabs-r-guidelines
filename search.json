@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "esqLABS R Coding Standards",
+    "title": "ESQlabs’ R Coding Standards",
     "section": "",
-    "text": "Welcome\nThe esqLABS R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at esqLABS.\nThis book introduces R good practices that must be followed by all esqLABS collaborators when writing R code. This includes respecting esqLABS coding style specifications based on the most important standard coding style rules. Additionally, it provides a list of useful R resources organized by topics and a some help for troubleshooting some common issues and mistakes.\n\n\n\n\n\n\nThis book is meant for all R users at esqLABS and apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards",
+    "text": "Welcome\nThe ESQlabs’ R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at ESQlabs.\nThis book introduces R good practices that must be followed by all ESQlabs collaborators when writing R code. This includes respecting ESQlabs’ coding style specifications based on the most important standard coding style rules. Additionally, it provides a list of useful R resources organized by topics and a some help for troubleshooting some common issues and mistakes.\n\n\n\n\n\n\nThis book is meant for all R users at ESQlabs and apply to all R code written for projects. For development guidelines, please refer to the OSPS-R coding standards",
     "crumbs": [
       "Welcome"
     ]
@@ -12,51 +12,51 @@
   {
     "objectID": "good_practices.html",
     "href": "good_practices.html",
-    "title": "1  esqLABS’ R good practices",
+    "title": "1  ESQlabs’ R good practices",
     "section": "",
     "text": "1.1 Within projects",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>esqLABS' R good practices</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ESQlabs' R good practices</span>"
     ]
   },
   {
     "objectID": "good_practices.html#within-projects",
     "href": "good_practices.html#within-projects",
-    "title": "1  esqLABS’ R good practices",
+    "title": "1  ESQlabs’ R good practices",
     "section": "",
     "text": "1.1.1 R projects\n\nUse R projects. R projects should be created when your project was initialized.\nDo not use setwd, with R projects the working directory should already be set to the right location.\nOnly use relative paths that are contained within your project structure.\n\n\n\n1.1.2 Renv\n\nUse {renv} to ensure every collaborator use the same version of the packages. Ideally your project should have been set up with {renv}.\n\n\n\n1.1.3 Style\n\nRespect coding style.\nHelp yourself and others by using {styler} package (for indentations and line breaks compliance), and {lintr} package for checking style (line length, variable casing, …).\n\nBoth packages provides easily accessible RStudio Addins (e.g. Style current file, Lint current file).\nStyling current file will directly reformat your file, while linting your file will tell you where and why your code is not compliant to the defined style.\nBoth packages and a default .lintr should be ready to use within your project (soon).\n\n\n\n\n1.1.4 Code Organisation and Structure\n\nRespect code header (include author, date, …), should be at the very beginning of the script:\n\n################################\n# Authors:     Name \n# Property:     ESQlabs GmbH\n# Initial Date: DD.MM.YYYY\n# Last updated: DD.MM.YYYY\n################################\n\nUse sections (commented lines of - or =) to break up your file into easily readable chunks.\n\n# Load Libraries --------------------\n\nLoad needed packages at the beginning of the file, in the first section just after the header.\nSource needed files (for example containing “homemade” functions) just after loading packages in a specific section.\nDefine constant parameters in a specific section just after loading packages or sourcing files.\n\n\n\n1.1.5 Comments\n\nComment your code. Explain the “why” not the “what” or “how”.\nOnce your code is finalized remove any commented code from your files.\n\n\n\n1.1.6 Functions\n\nGeneric “homemade” functions that might be needed in various R scripts should be written in a separate file sourced when needed.\nAvoid having too many nested levels (for loops, …). Try to create functions instead.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>esqLABS' R good practices</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>ESQlabs' R good practices</span>"
     ]
   },
   {
     "objectID": "style.html",
     "href": "style.html",
-    "title": "2  esqLABS’ R Style Guide",
+    "title": "2  ESQlabs’ R Style Guide",
     "section": "",
     "text": "2.1 Syntax",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ESQlabs' R Style Guide</span>"
     ]
   },
   {
     "objectID": "style.html#syntax",
     "href": "style.html#syntax",
-    "title": "2  esqLABS’ R Style Guide",
+    "title": "2  ESQlabs’ R Style Guide",
     "section": "",
     "text": "2.1.1 Naming Conventions\nIn order to better match the naming conventions used on other software projects within the company, the way names are defined is different from the tidyverse style guide.\nThe naming style depends on the type of object: \n\nVariable and function names should use only letters and numbers. Use camelCase to separate words within a name. \n# Good\n\nfitModel &lt;- function(){}\n\nresultsDf &lt;- data.frame()\n\n# Bad\n\nfit_model &lt;- function(){}\n\nResultsDf &lt;- data.frame()\nClass names should use PascalCasing.\nTrue constant variables should use ALL_CAPS casing. \n# Good\nCONSTANT_VAR &lt;- 1\n\n# Bad\n\nconstant_var &lt;- 1\nconstantVar &lt;- 1\nUse meaningful and understandable names. The code should read as a story and only some well-known abbreviations (such as pk) should be used.\n# Good\n\n# Primary key\npk &lt;- 1\n\n# Bad\n\n# Primary key\nprimary_key &lt;- 1\n\n\n\n2.1.2 Spacing\nBecause it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings:\n\nUse indentation of 2, \nUse spaces instead of tabs.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ESQlabs' R Style Guide</span>"
     ]
   },
   {
     "objectID": "style.html#functions",
     "href": "style.html#functions",
-    "title": "2  esqLABS’ R Style Guide",
+    "title": "2  ESQlabs’ R Style Guide",
     "section": "2.2 Functions",
     "text": "2.2 Functions\n\n2.2.1 return()\nPrefer using return() for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>esqLABS' R Style Guide</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>ESQlabs' R Style Guide</span>"
     ]
   },
   {
