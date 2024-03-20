@@ -5,7 +5,7 @@ execute:
 
 # ESQlabs' R Style Guide
 
-At ESQlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections will outline the most important differences with the Tidyverse guide.
+At ESQlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections outline the most important differences with the Tidyverse guide.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ However the naming style depends on the type of object: 
     CONSTANT_VAR <- 1
     ```
 
--   Use short meaningful and understandable names. The code should read as a story and only some well-known abbreviations should be used.
+-   Use short meaningful and understandable names. The code should read as a story and only some well-known abbreviations should be used:
 
     ```{r}
     # Good
@@ -44,7 +44,7 @@ However the naming style depends on the type of object: 
 
 ### Spacing
 
-Because it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings :
+Because it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings:
 
 -   Use spaces instead of tabs
 -   Use indentation width of 2
