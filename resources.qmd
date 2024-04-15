@@ -14,9 +14,10 @@ Some useful resources on various topics are listed below. As tons of resources a
 
 -   [Plots gallery](r-graph-gallery.com), can serve as examples or ideas
 
-## Advanced R
+## R Development
 
 -   [Advanced R](https://adv-r.hadley.nz/index.html)
+-   [R packages](https://r-pkgs.org/)
 
 ## Shiny Apps
 
