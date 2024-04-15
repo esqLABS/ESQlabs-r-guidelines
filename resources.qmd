@@ -17,6 +17,7 @@ Some useful resources on various topics are listed below. As tons of resources a
 ## R Development
 
 -   [Advanced R](https://adv-r.hadley.nz/index.html)
+
 -   [R packages](https://r-pkgs.org/)
 
 ## Shiny Apps
