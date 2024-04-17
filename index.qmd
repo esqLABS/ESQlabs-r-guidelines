@@ -1,6 +1,6 @@
 # Welcome {.unnumbered}
 
-The ESQlabs' R Coding Standards book establishes guidelines to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at ESQlabs.
+The ESQlabs' R Guidelines book establishes general and internal good practices to ensure that scripts are written in a unified manner that promotes readability, reproducibility and comprehension for all team members at ESQlabs.
 
 This book introduces [R good practices](good_practices.qmd) that must be followed by all ESQlabs collaborators when writing R code. This includes respecting [ESQlabs' coding style specifications](style.qmd) based on the most important [standard coding style rules](tidyverse_style.qmd). Additionally, it provides a [list of useful R resources](resources.qmd) organized by topics and a some help for [troubleshooting](troubleshooting.qmd) some common issues and mistakes.
 

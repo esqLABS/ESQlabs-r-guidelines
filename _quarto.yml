@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "ESQlabs' R Coding Standards"
+  title: "ESQlabs' R Guidelines"
   reader-mode: true
 
   page-footer:
@@ -11,8 +11,8 @@ book:
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 
-  site-url: https://esqlabs.github.io/esqlabs-r-coding-standards/
-  repo-url: https://github.com/esqLABS/esqlabs-r-coding-standards
+  site-url: https://esqlabs.github.io/esqlabs-r-guidelines/
+  repo-url: https://github.com/esqLABS/esqlabs-r-guidelines
   repo-branch: main
   repo-actions: [edit, issue]
 
