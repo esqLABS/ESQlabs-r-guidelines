@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/index.html</loc>
-    <lastmod>2024-04-17T07:14:11.311Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-guidelines/index.html</loc>
+    <lastmod>2024-04-17T07:22:53.597Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/good_practices.html</loc>
-    <lastmod>2024-04-17T07:14:11.311Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-guidelines/good_practices.html</loc>
+    <lastmod>2024-04-17T07:22:53.597Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/style.html</loc>
-    <lastmod>2024-04-17T07:14:11.311Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-guidelines/style.html</loc>
+    <lastmod>2024-04-17T07:22:53.597Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/tidyverse_style.html</loc>
-    <lastmod>2024-04-17T07:14:11.311Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-guidelines/tidyverse_style.html</loc>
+    <lastmod>2024-04-17T07:22:53.597Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/troubleshooting.html</loc>
-    <lastmod>2024-04-17T07:14:11.311Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-guidelines/troubleshooting.html</loc>
+    <lastmod>2024-04-17T07:22:53.597Z</lastmod>
   </url>
   <url>
-    <loc>https://esqlabs.github.io/esqlabs-r-coding-standards/resources.html</loc>
-    <lastmod>2024-04-17T07:14:11.311Z</lastmod>
+    <loc>https://esqlabs.github.io/esqlabs-r-guidelines/resources.html</loc>
+    <lastmod>2024-04-17T07:22:53.597Z</lastmod>
   </url>
 </urlset>

@@ -1,1 +1,1 @@
-Sitemap: https://esqlabs.github.io/esqlabs-r-coding-standards/sitemap.xml
+Sitemap: https://esqlabs.github.io/esqlabs-r-guidelines/sitemap.xml
