@@ -148,5 +148,85 @@
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Troubleshooting</span>"
     ]
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "5  Resources",
+    "section": "",
+    "text": "5.1 General",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#general",
+    "href": "resources.html#general",
+    "title": "5  Resources",
+    "section": "",
+    "text": "R for Data Science (2e)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#visualization",
+    "href": "resources.html#visualization",
+    "title": "5  Resources",
+    "section": "5.2 Visualization",
+    "text": "5.2 Visualization\n\nR Graphics Cookbook\nggplot2: Elegant Graphics for Data Analysis (3e) - WIP\nPlots gallery, can serve as examples or ideas",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#r-development",
+    "href": "resources.html#r-development",
+    "title": "5  Resources",
+    "section": "5.3 R Development",
+    "text": "5.3 R Development\n\nAdvanced R\nR packages",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#shiny-apps",
+    "href": "resources.html#shiny-apps",
+    "title": "5  Resources",
+    "section": "5.4 Shiny Apps",
+    "text": "5.4 Shiny Apps\n\nShiny Tutorials\nMastering Shiny\nGallery of apps and widgets",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#interactive-visualization",
+    "href": "resources.html#interactive-visualization",
+    "title": "5  Resources",
+    "section": "5.5 Interactive Visualization",
+    "text": "5.5 Interactive Visualization\n\nInteractive web-based data visualization with R, plotly, and shiny\nPlotly documentation",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#style-and-coding-standards",
+    "href": "resources.html#style-and-coding-standards",
+    "title": "5  Resources",
+    "section": "5.6 Style and Coding Standards",
+    "text": "5.6 Style and Coding Standards\n\nTidyverse style guide",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#cheatsheets",
+    "href": "resources.html#cheatsheets",
+    "title": "5  Resources",
+    "section": "5.7 Cheatsheets",
+    "text": "5.7 Cheatsheets\n\nRStudio has many cheatsheets",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
   }
 ]
