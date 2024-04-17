@@ -1,11 +1,16 @@
 ---
 format:
   html:
-    code-fold: true
+    code-fold: show
+    code-tools:
+          source: false
+          toggle: true
+          caption: none
     code-summary: "Examples"
 execute: 
   eval: false
 ---
+
 # Tidyverse Style Guide Highlights
 
 The [tidyverse style guide](https://style.tidyverse.org) is the reference regarding R coding style. The guide is quite comprehensive, with a lot of examples of what to do and what not to do. If you never read it, you should read it at least once.
@@ -23,14 +28,12 @@ Examples listed here might have been adapted, when appropriate, to follow [ESQla
 -   Prefer file names that are all lower case.
 -   If files should be run in a particular order, prefix them with numbers.
 
-
 ```{r}
 # Good
 01_preprocessing.R
 02_fit_models.R
 utility_functions.R
 ```
-
 
 ### Structure
 
@@ -48,7 +51,6 @@ library(esqlabsR)
 
 ## Plot observed vs simulated ---------
 ```
-
 
 ## Syntax
 
@@ -77,7 +79,6 @@ T <- FALSE # reusing of common name
 mean <- 10 # reusing of common function
 ```
 
-
 ### Assignment
 
 -   Use `<-`, not `=`, for assignment.
@@ -99,7 +100,6 @@ height <- (feet * 12) + inches
 bmi <- weight^2 / height
 ```
 
-
 #### Functions
 
 -   Do not put spaces inside or outside parentheses for regular function calls.
@@ -115,7 +115,6 @@ my_function <- function(x, y) {
   # As usual code is indented by two spaces
 }
 ```
-
 
 #### Statements
 
@@ -134,7 +133,6 @@ if (y < 0 && debug) {
 
 message <- if (x > 10) "big" else "small"
 ```
-
 
 #### Code blocks
 
@@ -155,7 +153,6 @@ if (y == 0) {
 }
 ```
 
-
 #### Pipes
 
 -   Pipes `%>%` should always have a space before it, and should usually be followed by a new line.
@@ -170,7 +167,6 @@ iris %>%
   arrange(value)
 ```
 
-
 #### ggplot2
 
 -   `+` should always have a space before it, and should be followed by a new line (such that each layer is on its own line).
@@ -181,7 +177,6 @@ ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length)) +
   geom_point() +
   labs(x = "Sepal Width (cm)", y = "Sepal Length (cm)")
 ```
-
 
 ## Long Lines
 
@@ -197,7 +192,6 @@ do_something_very_complicated(
   arguments = "some of which may be long"
 )
 ```
-
 
 ### Function definition
 
@@ -222,7 +216,6 @@ long_function_name <- function(
   # As usual code is indented by two spaces
 }
 ```
-
 
 ## Comments
 
