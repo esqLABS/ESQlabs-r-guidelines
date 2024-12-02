@@ -34,7 +34,7 @@
     "href": "style.html",
     "title": "2  ESQlabs’ R Style Guide",
     "section": "",
-    "text": "2.1 Syntax",
+    "text": "2.1 Syntax\nAt ESQlabs, we follow the tidyverse style guide with very few changes. The following sections outline the most important differences with the Tidyverse guide.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>ESQlabs' R Style Guide</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "tidyverse_style.html",
     "title": "3  Tidyverse Style Guide Highlights",
     "section": "",
-    "text": "3.1 Files",
+    "text": "3.1 Files\nThe tidyverse style guide is the reference regarding R coding style. The guide is quite comprehensive, with a lot of examples of what to do and what not to do. If you never read it, you should read it at least once.\nHere we highlight the main aspects of the tidyverse style guide, in a very synthetic way. This is to be used more as a checklist. Please refer to the full tidyverse style guide for more details and examples.\nExamples listed here might have been adapted, when appropriate, to follow ESQlabs’ style instead of the Tidyverse one.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tidyverse Style Guide Highlights</span>"
     ]
@@ -154,7 +154,17 @@
     "href": "resources.html",
     "title": "5  Resources",
     "section": "",
-    "text": "5.1 General",
+    "text": "5.1 Internal Presentations\nSome useful resources on various topics are listed below. As tons of resources are available online, this list is far from exhaustive and only focuses on the most useful and well made ones.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
+    ]
+  },
+  {
+    "objectID": "resources.html#internal-presentations",
+    "href": "resources.html#internal-presentations",
+    "title": "5  Resources",
+    "section": "",
+    "text": "Getting Help in R",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
@@ -163,8 +173,8 @@
     "objectID": "resources.html#general",
     "href": "resources.html#general",
     "title": "5  Resources",
-    "section": "",
-    "text": "R for Data Science (2e)",
+    "section": "5.2 General",
+    "text": "5.2 General\n\nR for Data Science (2e)",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
@@ -173,8 +183,8 @@
     "objectID": "resources.html#visualization",
     "href": "resources.html#visualization",
     "title": "5  Resources",
-    "section": "5.2 Visualization",
-    "text": "5.2 Visualization\n\nR Graphics Cookbook\nggplot2: Elegant Graphics for Data Analysis (3e) - WIP\nPlots gallery, can serve as examples or ideas",
+    "section": "5.3 Visualization",
+    "text": "5.3 Visualization\n\nR Graphics Cookbook\nggplot2: Elegant Graphics for Data Analysis (3e) - WIP\nPlots gallery, can serve as examples or ideas",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
@@ -183,8 +193,8 @@
     "objectID": "resources.html#r-development",
     "href": "resources.html#r-development",
     "title": "5  Resources",
-    "section": "5.3 R Development",
-    "text": "5.3 R Development\n\nAdvanced R\nR packages",
+    "section": "5.4 R Development",
+    "text": "5.4 R Development\n\nAdvanced R\nR packages",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
@@ -193,8 +203,8 @@
     "objectID": "resources.html#shiny-apps",
     "href": "resources.html#shiny-apps",
     "title": "5  Resources",
-    "section": "5.4 Shiny Apps",
-    "text": "5.4 Shiny Apps\n\nShiny Tutorials\nMastering Shiny\nGallery of apps and widgets",
+    "section": "5.5 Shiny Apps",
+    "text": "5.5 Shiny Apps\n\nShiny Tutorials\nMastering Shiny\nGallery of apps and widgets",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
@@ -203,8 +213,8 @@
     "objectID": "resources.html#interactive-visualization",
     "href": "resources.html#interactive-visualization",
     "title": "5  Resources",
-    "section": "5.5 Interactive Visualization",
-    "text": "5.5 Interactive Visualization\n\nInteractive web-based data visualization with R, plotly, and shiny\nPlotly documentation",
+    "section": "5.6 Interactive Visualization",
+    "text": "5.6 Interactive Visualization\n\nInteractive web-based data visualization with R, plotly, and shiny\nPlotly documentation",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
@@ -213,8 +223,8 @@
     "objectID": "resources.html#style-and-coding-standards",
     "href": "resources.html#style-and-coding-standards",
     "title": "5  Resources",
-    "section": "5.6 Style and Coding Standards",
-    "text": "5.6 Style and Coding Standards\n\nTidyverse style guide",
+    "section": "5.7 Style and Coding Standards",
+    "text": "5.7 Style and Coding Standards\n\nTidyverse style guide",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
@@ -223,8 +233,8 @@
     "objectID": "resources.html#cheatsheets",
     "href": "resources.html#cheatsheets",
     "title": "5  Resources",
-    "section": "5.7 Cheatsheets",
-    "text": "5.7 Cheatsheets\n\nRStudio has many cheatsheets",
+    "section": "5.8 Cheatsheets",
+    "text": "5.8 Cheatsheets\n\nRStudio has many cheatsheets",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Resources</span>"
     ]
