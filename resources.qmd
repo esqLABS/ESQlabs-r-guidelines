@@ -2,6 +2,10 @@
 
 Some useful resources on various topics are listed below. As tons of resources are available online, this list is far from exhaustive and only focuses on the most useful and well made ones.
 
+## Internal Presentations
+
+-   [Getting Help in R](presentations/getting-help-and-reprex.html)
+
 ## General
 
 -   [R for Data Science (2e)](https://r4ds.hadley.nz/)

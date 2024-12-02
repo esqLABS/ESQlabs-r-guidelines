@@ -3,9 +3,6 @@ title: "Getting Help in R"
 subtitle: "Help me Help you"
 author: "Felix MIL"
 date: 2024-12-04
-date-modified: last-modified
-institute: ESQlabs Gmbh
-format: esqlabs-revealjs
 ---
 
 ## Getting help: a 3 step process
