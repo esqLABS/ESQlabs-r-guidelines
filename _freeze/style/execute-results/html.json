@@ -1,0 +1,15 @@
+{
+  "hash": "f39428e3c6e0198ddfd34a969d8a17e9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nexecute: \n  eval: false\n---\n\n\n\n\n# ESQlabs' R Style Guide\n\nAt ESQlabs, we follow the [tidyverse style guide](https://style.tidyverse.org) with very few changes. The following sections outline the most important differences with the Tidyverse guide.\n\n## Syntax\n\n### Naming Conventions\n\nFor simplicity, users should use `snake_case` as recommended by the tidyverse style (this is not the case for developers that should follow the [OSPS-R coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS_R.md)).\n\nHowever the naming style depends on the type of object: \n\n-   Variable and function names should use only letters and numbers. Use `snake_case` to separate words within a name:\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    # Good\n    fit_model <- function() {\n      # code\n    }\n    results_df <- data.frame()\n    ```\n    :::\n\n\n\n\n-   True constant variables should use `ALL_CAPS` casing:\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    # Good\n    CONSTANT_VAR <- 1\n    ```\n    :::\n\n\n\n\n-   Use short meaningful and understandable names. The code should read as a story and only some well-known abbreviations should be used:\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    # Good\n    pk_data <- read_excel(\"pkDataFile.xls\")\n    \n    # Bad\n    pharmacokinetics_data <- read_excel(\"pkDataFile.xls\") # Too long\n    ```\n    :::\n\n\n\n\n### Spacing\n\nBecause it is not explicitly said in the tidyverse guideline and for improved code readability, use the following indentation settings:\n\n-   Use spaces instead of tabs\n-   Use indentation width of 2\n\nYou can check that these settings are correctly set in Tools \\> Global Options \\> Code \\> Editing:\n\n![](images/indent_settings.png){width=\"130\"}\n\n## Functions\n\n### `return()`\n\nPrefer using `return()` for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function.\n\n## Line length\n\nAvoid having long lines. Restrict yourself to 120 characters (instead of the usual limit of 80 characters).\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

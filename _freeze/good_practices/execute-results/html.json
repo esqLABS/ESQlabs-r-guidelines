@@ -1,0 +1,15 @@
+{
+  "hash": "3d16aafc31471330b1f88faa272278cd",
+  "result": {
+    "engine": "knitr",
+    "markdown": "# ESQlabs' R Good Practices\n\n## Within projects\n\n### R projects\n\n-   Use R projects. R projects should be created when your project was initialized.\n\n-   Do not use `setwd`, with R projects the working directory should already be set to the right location.\n\n-   Only use relative paths that are contained within your project structure.\n\n### Renv\n\n-   Use `{renv}` to ensure every collaborator use the same version of the packages. Ideally your project should have been set up with `{renv}`.\n\n### Style\n\n-   Respect coding [style](style.qmd).\n\n-   Help yourself and others by using [`{styler}`](https://styler.r-lib.org/) package (for indentations and line breaks compliance), and [`{lintr}`](https://lintr.r-lib.org/) package for checking style (line length, variable casing, ...).\n\n    -   Both packages provides easily accessible RStudio Addins (e.g. Style current file, Lint current file).\n\n    -   Styling current file will directly reformat your file, while linting your file will tell you where and why your code is not compliant to the defined style.\n\n    -   Both packages and a default `.lintr` should be ready to use within your project (soon).\n\n### Code Organisation and Structure\n\n-   Respect code header (include author, date, ...), should be at the very beginning of the script:\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    ################################\n    # Authors:     Name \n    # Property:     ESQlabs GmbH\n    # Initial Date: DD.MM.YYYY\n    # Last updated: DD.MM.YYYY\n    ################################\n    ```\n    :::\n\n\n\n\n-   Use sections (commented lines of `-` or `=`) to break up your file into easily readable chunks.\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    # Load Libraries --------------------\n    ```\n    :::\n\n\n\n\n-   Load needed packages at the beginning of the file, in the first section just after the header.\n\n-   Source needed files (for example containing \"homemade\" functions) just after loading packages in a specific section.\n\n-   Define constant parameters in a specific section just after loading packages or sourcing files.\n\n### Comments\n\n-   Comment your code. Explain the \"why\" not the \"what\" or \"how\".\n\n-   Once your code is finalized remove any commented code from your files.\n\n### Functions\n\n-   Generic \"homemade\" functions that might be needed in various R scripts should be written in a separate file sourced when needed.\n\n-   Avoid having too many nested levels (for loops, ...). Try to create functions instead.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
