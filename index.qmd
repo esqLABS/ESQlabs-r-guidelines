@@ -5,5 +5,5 @@ The ESQlabs' R Guidelines book establishes general and internal good practices t
 This book introduces [R good practices](good_practices.qmd) that must be followed by all ESQlabs collaborators when writing R code. This includes respecting [ESQlabs' coding style specifications](style.qmd) based on the most important [standard coding style rules](tidyverse_style.qmd). Additionally, it provides a [list of useful R resources](resources.qmd) organized by topics and a some help for [troubleshooting](troubleshooting.qmd) some common issues and mistakes.
 
 ::: callout-note
-This book is meant for all R users at ESQlabs and apply to all R code written for projects. For development guidelines, please refer to the [OSPS-R coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS_R.md)
+This book is meant for all R users at ESQlabs and apply to all R code written for projects. For development guidelines, please refer to the [OSPS-R coding standards](https://dev.open-systems-pharmacology.org/r-development-resources/coding_standards_r)
 :::
