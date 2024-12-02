@@ -1,0 +1,501 @@
+---
+title: "Getting Help in R"
+subtitle: "Help me Help you"
+author: "Felix MIL"
+date: 2024-12-04
+date-modified: last-modified
+institute: ESQlabs Gmbh
+format: esqlabs-revealjs
+---
+
+## Getting help: a 3 step process
+
+1.  Read the doc
+
+2.  Browse previously asked questions
+
+3.  Ask for help
+
+# Read the doc
+
+## R Resources
+
+-   [R documentation Hub](https://www.r-project.org/other-docs.html)
+
+![](images/rdoc.png){fig-align="center"}
+
+## Packages Resources
+
+### Look for websites !
+
+A convenient and nicer way to browse package's documentation
+
+![](images/clipboard-4052883620.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+#### Get started
+
+Usually a short tutorial that demonstrates main package features.
+
+![](images/clipboard-2675412918.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+#### Function Reference
+
+Lists all the packages functions and links to documentation pages.
+
+![](images/clipboard-1367497379.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+#### Articles / Tutorials
+
+Task-specific tutorials and more information.
+
+![](images/clipboard-3291815491.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+#### Search Feature
+
+All packages websites built with `{pkgdown}` have a powerful built-in search box, use it !
+
+![](images/clipboard-2878951804.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+### Getting Help From the R console
+
+Almost all the website content is also accessible within your r session:
+
+-   `vignette("[pkgName]")` will open "Get started" page in the Help tab,
+
+![](images/clipboard-3029299193.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+-   When typing a function use `tab⇥` to see all available options,
+
+![](images/clipboard-3923958321.png){fig-align="center"}
+
+-   When typing functions arguments, use `tab⇥` to see all available arguments
+
+![](images/clipboard-1076717178.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+-   When using a function, use `F1` key to open help page (or use `?[function]` )
+
+![](images/clipboard-3894745250.png){fig-align="center"}
+
+## Internal Resources
+
+### Packages Websites
+
+All our packages have dedicated websites. You can find the links in GitHub repositories (or in Bluespice)
+
+![](images/clipboard-2245214679.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+### [r.esqlabs.com](https://r.esqlabs.com)
+
+A collection of presentation/workshop material developed internally.
+
+![](images/clipboard-1944764278.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+### [ESQlabs R Guidelines website](https://esqlabs.github.io/ESQlabs-r-guidelines/)
+
+![](images/clipboard-3407242994.png){fig-align="center"}
+
+## AI assistants
+
+You can try to ask questions, generate or explain code chunks and even debug your own code !
+
+::: {layout-ncol="2"}
+![](images/clipboard-972073095.png){fig-align="center"}
+
+![](images/clipboard-2798926309.png){width="426"}
+:::
+
+::: callout-warning
+Do not feed any sensitive data to AI assistant !
+:::
+
+# Browse previously asked questions
+
+## You're not alone
+
+Someone else probably had the same/similar question before !
+
+-   [Posit Community Forum](https://forum.posit.co/)
+
+-   [Stack Overflow](https://stackoverflow.com/questions/tagged/r)
+
+-   [R support Teams Channel (Modeling and Simulation \| R Support)](Modeling%20and%20Simulation%20%7C%20R%20Support%20%7C%20Microsoft%20Teams) (use the search feature)
+
+-   GitHub issues
+
+::: callout-warning
+Asking questions in GitHub issues should be avoided. But sometime, the answer is there.
+:::
+
+# Ask for Help
+
+## How to ask for help ?
+
+## Do not share screenshots
+
+![](images/clipboard-975964798.png){fig-align="center"}
+
+## Do not Copy Paste from Console
+
+``` r
+library(dplyr)
+library(readxl)
+setwd("/Users/NoOne/Documents/my_work_folder/project_1/data")
+data <- read_xlsx("Export 2024-01-02 V5.xlsx")
+data %>%
+  mutate(year = case_when(date <= "2020-12-31" & date >= "2020-01-01" ~ 2020,
+                          is.na(date) ~ NA))
+Error: Problem with `mutate()` input `year`.
+x must be a double vector, not a logical vector.
+ℹ Input `year` is `case_when(...)`.
+```
+
+Others must make fiddly edits to run the code.
+
+## How to ask for help ?
+
+. . .
+
+By creating a **minimal reproducible example** or **reprex.**
+
+![Art by \@allison_horst](images/clipboard-1705733064.png){fig-align="center" width="522"}
+
+## What is a reprex ?
+
+A reprex should include:
+
+-   a minimal dataset, necessary to demonstrate the problem
+
+-   the minimal runnable code necessary to reproduce the error, which can be run on the given dataset
+
+<!-- 
+
+-   all necessary information on the used packages, the R version, and the OS it is run on
+-   in the case of random processes, a seed (set by `set.seed()`) for reproducibility
+
+-->
+
+## Why should I reprex ?
+
+Making a minimal, reproducible example **can take time**. It can be easy to convince yourself to skip the process and "just get the help I need". But **the time is ultimately worth spending**.
+
+-   **80%** of the time creating a reprex reveals the source of your problem. The process of writing up a self-contained and minimal example allows you to learn and answer your own question.
+
+-   **20%** of time you will have captured the essence of your problem in a way that is easy for others to play with.
+
+. . .
+
+**Help yourself and help others help you !**
+
+## How to reprex ?
+
+```{r}
+#| eval: false
+#| output-location: default
+
+install.packages("reprex")
+library(reprex)
+```
+
+```{r}
+#| echo: false
+#| output-location: default
+ 
+library(reprex)
+```
+
+Write your reproducible minimal example inside `reprex()` function
+
+``` r
+reprex({
+  (y <- 1:4)
+  mean(y)
+})
+```
+
+A nicely rendered HTML preview will display in RStudio’s Viewer and a piece of markdown will be added to your clipboard\
+
+::: {layout-ncol="2"}
+![](images/clipboard-1867774685.png)
+
+``` r
+(y <- 1:4)
+#> [1] 1 2 3 4
+mean(y)
+#> [1] 2.5
+```
+:::
+
+------------------------------------------------------------------------
+
+## A good reprex needs
+
+-   [x] **Libraries☝️**
+
+-   [x] **Data ✌️**
+
+-   [x] **Code 👌**
+
+## Librairies ☝
+
+```{r}
+#| eval: false
+#| output-location: default
+#| code-line-numbers: "2"
+reprex({
+  library(ospsuite)
+  
+  filePath <- system.file("extdata", 
+                          "Diclofenac_PK_data_complete.xlsx", 
+                          package = "ospsuite.parameteridentification")
+  
+  importConfig <- createImporterConfigurationForFile(filePath = filePath)
+  
+  obsData <- loadDataSetsFromExcel(xlsFilePath = filePath,
+                                   importerConfigurationOrPath = importConfig,
+                                   importAllSheets = TRUE)
+})
+```
+
+-   A reprex is isolated from your working environment
+
+    -   All needed libraries need to be loaded explicitly,
+
+    -   Variable defined in a reprex will not interact with the ones defined in your working environment,
+
+## Data✌️
+
+```{r}
+#| eval: false
+#| output-location: default
+#| code-line-numbers: "4-6"
+reprex({
+  library(ospsuite)
+  
+  filePath <- system.file("extdata", 
+                          "Diclofenac_PK_data_complete.xlsx", 
+                          package = "ospsuite.parameteridentification")
+  
+  importConfig <- createImporterConfigurationForFile(filePath = filePath)
+  
+  obsData <- loadDataSetsFromExcel(xlsFilePath = filePath,
+                                   importerConfigurationOrPath = importConfig,
+                                   importAllSheets = TRUE)
+})
+```
+
+-   When possible, try to use example or built-in data (`mtcars` dataset, `aciclovir` simulation, etc.)
+
+-   For `{esqlabsR}` projects, attach project configuration files
+
+## 🔥Never use `setwd()` 🔥
+
+`setwd("C:\Users\absolutelyNoOne\path\that\only\I\have")`
+
+The chances that `setwd()` works on another computer are approximately 0%.
+
+Use **RStudio Projects** instead 😉
+
+## Code 👌
+
+```{r}
+#| eval: false
+#| output-location: default
+#| code-line-numbers: "8-12"
+reprex({
+  library(ospsuite)
+  
+  filePath <- system.file("extdata", 
+                          "Diclofenac_PK_data_complete.xlsx", 
+                          package = "ospsuite.parameteridentification")
+  
+  importConfig <- createImporterConfigurationForFile(filePath = filePath)
+  
+  obsData <- loadDataSetsFromExcel(xlsFilePath = filePath,
+                                   importerConfigurationOrPath = importConfig,
+                                   importAllSheets = TRUE)
+})
+```
+
+-   Try to remove all unnecessary code to make it easy for other to understand what your code does,
+
+-   If you are not sure where the error occurs, add lines one by one until the code fails.
+
+## Output
+
+The Output will automatically appear in the Viewer pan, and a Markdown sample will be added to your clipboard, ready to be pasted.
+
+```         
+library(ospsuite)
+#> Loading required package: rSharp
+#> 
+#> Attaching package: 'ospsuite'
+#> The following object is masked from 'package:base':
+#> 
+#>     %||%
+
+filePath <- system.file("extdata", 
+                        "Diclofenac_PK_data_complete.xlsx", 
+                        package = "ospsuite.parameteridentification")
+
+importConfig <- createImporterConfigurationForFile(filePath = filePath)
+#> Error in do.call(".External", c(list("r_call_method", self$pointer, methodName), : Type:    OSPSuite.Infrastructure.Import.Core.UnsupportedFileTypeException
+#> Message: The type of file that you are trying to open is not currently supported
+#> ...
+
+obsData <- loadDataSetsFromExcel(xlsFilePath = filePath,
+                                 importerConfigurationOrPath = importConfig,
+                                 importAllSheets = TRUE)
+#> Error in eval(expr, envir, enclos): object 'importConfig' not found
+```
+
+## Share it !
+
+You can now paste this in the R Support Teams Channel
+
+1.  Create a Code block,
+
+![](images/clipboard-2738821917.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+2.  Paste (Pick "Plain Text"),\
+
+![](images/clipboard-3971464439.png){fig-align="center"}
+
+3.  Add short description of what you are trying to do and attach necessary files,
+4.  Post.
+
+## A **great** reprex needs
+
+-   [x] **Libraries☝️**
+
+-   [x] **Data ✌️**
+
+-   [x] **Code 👌**
+
+-   [x] **Session Infos 🤟**
+
+## Session Info 🤟
+
+```{r}
+#| eval: false
+#| output-location: default
+#| code-line-numbers: "14"
+reprex({
+  library(ospsuite)
+  
+  filePath <- system.file("extdata", 
+                          "Diclofenac_PK_data_complete.xlsx", 
+                          package = "ospsuite.parameteridentification")
+  
+  importConfig <- createImporterConfigurationForFile(filePath = filePath)
+  
+  obsData <- loadDataSetsFromExcel(xlsFilePath = filePath,
+                                   importerConfigurationOrPath = importConfig,
+                                   importAllSheets = TRUE)
+  }, 
+  session_info = TRUE)
+```
+
+------------------------------------------------------------------------
+
+``` r
+library(ospsuite)
+#> Loading required package: rSharp
+#> 
+#> Attaching package: 'ospsuite'
+#> The following object is masked from 'package:base':
+#> 
+#>     %||%
+
+filePath <- system.file("extdata", 
+                        "Diclofenac_PK_data_complete.xlsx", 
+                        package = "ospsuite.parameteridentification")
+
+importConfig <- createImporterConfigurationForFile(filePath = filePath)
+#> Error in do.call(".External", c(list("r_call_method", self$pointer, methodName), : Type:    OSPSuite.Infrastructure.Import.Core.UnsupportedFileTypeException
+#> Message: The type of file that you are trying to open is not currently supported
+#> Method:  OSPSuite.Infrastructure.Import.Core.IDataSourceFile For(System.String)
+#> Stack trace:
+#>    at OSPSuite.Infrastructure.Import.Core.DataSourceFileParser.For(String path)
+#>    at OSPSuite.Infrastructure.Import.Services.Importer.LoadFile(ColumnInfoCache columnInfos, String fileName, IReadOnlyList`1 metaDataCategories)
+#>    at OSPSuite.Infrastructure.Import.Services.AbstractDataImporter.ConfigurationFromData(String dataPath, IReadOnlyList`1 columnInfos, IReadOnlyList`1 metaDataCategories, String sheetName)
+#>    at OSPSuite.R.Services.DataImporterTask.CreateConfigurationFor(String dataPath, String sheetName)
+#>    at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+#>    at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags inv
+
+obsData <- loadDataSetsFromExcel(xlsFilePath = filePath,
+                                 importerConfigurationOrPath = importConfig,
+                                 importAllSheets = TRUE)
+#> Error in eval(expr, envir, enclos): object 'importConfig' not found
+sessionInfo()
+#> R version 4.4.1 (2024-06-14 ucrt)
+#> Platform: x86_64-w64-mingw32/x64
+#> Running under: Windows 11 x64 (build 22631)
+#> 
+#> Matrix products: default
+#> 
+#> 
+#> locale:
+#> [1] LC_COLLATE=English_United Kingdom.utf8 
+#> [2] LC_CTYPE=English_United Kingdom.utf8   
+#> [3] LC_MONETARY=English_United Kingdom.utf8
+#> [4] LC_NUMERIC=C                           
+#> [5] LC_TIME=English_United Kingdom.utf8    
+#> 
+#> time zone: Europe/Paris
+#> tzcode source: internal
+#> 
+#> attached base packages:
+#> [1] stats     graphics  grDevices utils     datasets  methods   base     
+#> 
+#> other attached packages:
+#> [1] ospsuite_12.1.0.9007 rSharp_1.0.0.9000   
+#> 
+#> loaded via a namespace (and not attached):
+#>  [1] gtable_0.3.6         jsonlite_1.8.7       dplyr_1.1.4         
+#>  [4] compiler_4.4.1       ospsuite.utils_1.5.0 reprex_2.1.1        
+#>  [7] tidyselect_1.2.1     xml2_1.3.6           showtext_0.9-7      
+#> [10] tidyr_1.3.1          scales_1.3.0         yaml_2.3.7          
+#> [13] fastmap_1.1.1        ggplot2_3.5.1        R6_2.5.1            
+#> [16] tlf_1.5.0            generics_0.1.3       showtextdb_3.0      
+#> [19] knitr_1.44           tibble_3.2.1         munsell_0.5.1       
+#> [22] pillar_1.9.0         rlang_1.1.1          utf8_1.2.4          
+#> [25] xfun_0.40            fs_1.6.3             cli_3.6.1           
+#> [28] withr_3.0.2          magrittr_2.0.3       digest_0.6.33       
+#> [31] grid_4.4.1           rstudioapi_0.17.1    lifecycle_1.0.3     
+#> [34] sysfonts_0.8.9       vctrs_0.6.4          evaluate_0.22       
+#> [37] glue_1.6.2           data.table_1.16.2    fansi_1.0.6         
+#> [40] colorspace_2.1-1     rmarkdown_2.25       purrr_1.0.2         
+#> [43] tools_4.4.1          pkgconfig_2.0.3      htmltools_0.5.6.1
+```
+
+## References
+
+-   reprex documentation: <https://reprex.tidyverse.org/index.html>
+
+-   Ariel Muldoon "How to reprex" presentation: <https://aosmith16.github.io/spring-r-topics/slides/week09_reprex.html#1>
+
+-   Jenny Bryan "Creating reproducible example with reprex": <https://speakerdeck.com/jennybc/reprex-reproducible-examples-with-r>
+
+-   R Language collective answer on StackOverflow: <https://stackoverflow.com/a/5963610/8557146>
+
+# Happy reprex ! 🎉
