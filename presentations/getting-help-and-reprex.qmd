@@ -7,25 +7,25 @@ date: 2024-12-04
 
 ## Getting help: a 3 step process
 
-1.  Read the doc
+1.  Read the doc,
 
-2.  Browse previously asked questions
+2.  Browse previously asked questions,
 
-3.  Ask for help
+3.  Ask for help.
 
 # Read the doc
 
-## R Resources
+## R Documentation
 
 -   [R documentation Hub](https://www.r-project.org/other-docs.html)
 
 ![](images/rdoc.png){fig-align="center"}
 
-## Packages Resources
+## Packages Documentation
 
-### Look for websites !
+### Look for websites
 
-A convenient and nicer way to browse package's documentation
+A convenient and nicer way to browse package's documentation.
 
 ![](images/clipboard-4052883620.png){fig-align="center"}
 
@@ -73,17 +73,17 @@ Almost all the website content is also accessible within your r session:
 
 ------------------------------------------------------------------------
 
--   When typing a function use `tab⇥` to see all available options,
+-   When typing a function use `tab⇥` to see all available options.
 
 ![](images/clipboard-3923958321.png){fig-align="center"}
 
--   When typing functions arguments, use `tab⇥` to see all available arguments
+-   When typing functions arguments, use `tab⇥` to see all available arguments.
 
 ![](images/clipboard-1076717178.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
--   When using a function, use `F1` key to open help page (or use `?[function]` )
+-   When using a function, use `F1` key to open help page (or use `?[function]` ).
 
 ![](images/clipboard-3894745250.png){fig-align="center"}
 
@@ -111,7 +111,7 @@ A collection of presentation/workshop material developed internally.
 
 ## AI assistants
 
-You can try to ask questions, generate or explain code chunks and even debug your own code !
+You can try to ask questions, generate or explain code chunks and even debug your own code.
 
 ::: {layout-ncol="2"}
 ![](images/clipboard-972073095.png){fig-align="center"}
@@ -127,15 +127,15 @@ Do not feed any sensitive data to AI assistant !
 
 ## You're not alone
 
-Someone else probably had the same/similar question before !
+Someone else probably had the same/similar question before.
 
--   [Posit Community Forum](https://forum.posit.co/)
+-   [Posit Community Forum](https://forum.posit.co/),
 
--   [Stack Overflow](https://stackoverflow.com/questions/tagged/r)
+-   [Stack Overflow](https://stackoverflow.com/questions/tagged/r),
 
--   [R support Teams Channel (Modeling and Simulation \| R Support)](Modeling%20and%20Simulation%20%7C%20R%20Support%20%7C%20Microsoft%20Teams) (use the search feature)
+-   [R support Teams Channel (Modeling and Simulation \| R Support)](Modeling%20and%20Simulation%20%7C%20R%20Support%20%7C%20Microsoft%20Teams) (use the search feature),
 
--   GitHub issues
+-   GitHub issues.
 
 ::: callout-warning
 Asking questions in GitHub issues should be avoided. But sometime, the answer is there.
@@ -170,24 +170,19 @@ Others must make fiddly edits to run the code.
 
 . . .
 
-By creating a **minimal reproducible example** or **reprex.**
+By creating a **reproducible example** or **reprex.**
 
 ![Art by \@allison_horst](images/clipboard-1705733064.png){fig-align="center" width="522"}
 
+
 ## What is a reprex ?
 
-A reprex should include:
-
--   a minimal dataset, necessary to demonstrate the problem
-
--   the minimal runnable code necessary to reproduce the error, which can be run on the given dataset
-
-<!-- 
-
--   all necessary information on the used packages, the R version, and the OS it is run on
--   in the case of random processes, a seed (set by `set.seed()`) for reproducibility
-
--->
+- A code chunk,
++ reproduce a problem,
++ minimalist,
++ self-contained,
++ shows outputs,
++ easy to run.
 
 ## Why should I reprex ?
 
@@ -197,9 +192,9 @@ Making a minimal, reproducible example **can take time**. It can be easy to conv
 
 -   **20%** of time you will have captured the essence of your problem in a way that is easy for others to play with.
 
-. . .
-
 **Help yourself and help others help you !**
+
+
 
 ## How to reprex ?
 

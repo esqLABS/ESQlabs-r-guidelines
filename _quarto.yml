@@ -1,5 +1,6 @@
 project:
   type: book
+  pre-render: pre-render.R
 
 book:
   title: "ESQlabs' R Guidelines"
